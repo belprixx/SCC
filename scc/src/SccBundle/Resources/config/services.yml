@@ -1,0 +1,4 @@
+services:
+#    scc.example:
+#        class: SccBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
