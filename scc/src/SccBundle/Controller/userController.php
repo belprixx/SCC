@@ -16,5 +16,14 @@ class userController extends Controller
             // ...
         ));
     }
+    /**
+     * @Route("/user/profil")
+     */
+    public function indexAction()
+    {
+        return $this->render('SccBundle:user:profil.html.twig', array(
+            // ...
+        ));
+    }
 
 }
