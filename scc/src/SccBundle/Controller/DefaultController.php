@@ -12,6 +12,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $test = "theo";
         return $this->render('SccBundle:Default:index.html.twig');
     }
 }

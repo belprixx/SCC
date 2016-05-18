@@ -12,6 +12,7 @@ class userController extends Controller
      */
     public function profilAction()
     {
+        $test = "theo";
         return $this->render('SccBundle:user:profil.html.twig', array(
             // ...
         ));
