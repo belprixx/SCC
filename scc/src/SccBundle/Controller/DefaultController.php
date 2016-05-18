@@ -22,4 +22,12 @@ class DefaultController extends Controller
     {
         return $this->render('SccBundle:Default:indexFaq.html.twig');
     }
+
+    /**
+     * @Route("/agenda", name="indexAgenda")
+     */
+    public function indexAgenda()
+    {
+        return $this->render('SccBundle:Default:indexAgenda.html.twig');
+    }
 }
