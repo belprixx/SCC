@@ -16,9 +16,9 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#/profile" ng-if="isConnected()">Mon profil</a></li>
+                        <li><a href="#/profile">Mon profil</a></li>
                         <li><a href="#/contact">Contact</a></li>
-                        <li><a href="#/login" ng-if="!isConnected()">Connexion</a></li>
+                        <li><a href="#/login">Connexion</a></li>
 
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <p>Username: {{ app.user.username }}</p>
