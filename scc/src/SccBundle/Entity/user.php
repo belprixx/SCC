@@ -2,6 +2,7 @@
 
 namespace SccBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="SccBundle\Repository\userRepository")
  */
-class user
+class user extends BaseUser
 {
     /**
      * @var int
@@ -19,7 +20,7 @@ class user
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -48,14 +49,7 @@ class user
      * @ORM\Column(name="login", type="string", length=255)
      */
     private $login;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255)
-     */
-    private $password;
-
+    
     /**
      * @var int
      *
