@@ -25,7 +25,10 @@ class userController extends Controller
             // ...
         ));
     }
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 0635c7011172bf67832d1892f907dfd70d702ad3
 
 }
