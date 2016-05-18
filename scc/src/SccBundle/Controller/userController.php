@@ -12,7 +12,7 @@ class userController extends Controller
      */
     public function profilAction()
     {
-        return $this->render('SccBundle:user:profil.html.twig', array(// ...
+        return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
         ));
     }
 
@@ -21,7 +21,7 @@ class userController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('SccBundle:user:profil.html.twig', array(// ...
+        return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
         ));
     }
 }
