@@ -65,9 +65,23 @@
         </div>
     </div>
 
-    <div id="calendar">
+    <div class="row" id="lastSubmissions">
+        <h1>
+            LES DERNIERES CANDIDATURES
+        </h1>
+    </div>
 
-
+    <div class="row">
+        <div id="calendarUserIndex" class="col-md-6">
+            {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
+        </div>
+        <div id="uploadFiles" class="col-md-6">
+            <h3>Ajout fichiers</h3>
+            <p>
+                ICI on peut ajouter des tas de fichiers. Genre les RIB, les justificatifs, toussah quoi. C'est un peu la fête.
+                Mais bon, pour l'instan ça ne marche pas car c'est Théo qui a dit qu'on gèrait pas les fichiers pour le moments.
+            </p>
+        </div>
     </div>
 
 {% endblock %}
