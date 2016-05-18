@@ -716,7 +716,6 @@
             "time": "2015-08-31 13:19:01"
         },
         {
-<<<<<<< HEAD
             "name": "friendsofsymfony/jsrouting-bundle",
             "version": "1.6.0",
             "source": {
@@ -739,7 +738,6 @@
             },
             "require-dev": {
                 "symfony/expression-language": "~2.4|3.*"
-=======
             "name": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "source": {
@@ -771,25 +769,18 @@
             },
             "suggest": {
                 "willdurand/propel-typehintable-behavior": "Needed when using the propel implementation"
->>>>>>> 57f3f95d3df5838ec1b1d41e18c7c3fd2efbd254
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-<<<<<<< HEAD
                     "dev-master": "1.5-dev"
-=======
                     "dev-master": "2.0.x-dev"
->>>>>>> 57f3f95d3df5838ec1b1d41e18c7c3fd2efbd254
                 }
             },
             "autoload": {
                 "psr-4": {
-<<<<<<< HEAD
                     "FOS\\JsRoutingBundle\\": ""
-=======
                     "FOS\\UserBundle\\": ""
->>>>>>> 57f3f95d3df5838ec1b1d41e18c7c3fd2efbd254
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -798,7 +789,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
                     "name": "FriendsOfSymfony Community",
                     "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 },
@@ -815,7 +805,6 @@
                 "routing"
             ],
             "time": "2015-10-28 15:08:39"
-=======
                     "name": "Christophe Coevoet",
                     "email": "stof@notk.org"
                 },
@@ -834,7 +823,6 @@
                 "User management"
             ],
             "time": "2016-05-13 11:27:34"
->>>>>>> 57f3f95d3df5838ec1b1d41e18c7c3fd2efbd254
         },
         {
             "name": "incenteev/composer-parameter-handler",
