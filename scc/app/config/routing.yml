@@ -16,3 +16,6 @@ adesigns_calendar:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+CCDNForumForumBundle:
+    resource: "@CCDNForumForumBundle/Resources/config/routing.yml"
