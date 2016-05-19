@@ -1,5 +1,46 @@
+/* ----------- Header ----------- */
+
+.logo {
+    width: 76px;
+    height: 56px;
+}
+
+/* ----------- Page User ----------- */
+
+/* Facture */
+
+.facture {
+    margin-top: 2%;
+}
+
+/* Candidature */
+
+.candidature {
+    color: #9d9d9d;
+}
+
+/* Agenda */
+
+.agenda {
+    margin-bottom: 2%;
+}
+
+/* ----------- Footer ----------- */
 
 footer {
+    background-color: #212121;
+    min-height: 170px;
+    color: #9d9d9d;
     margin-bottom: 0;
-    background-color: #000000;
+    width: 100%;
+    position: absolute;
+}
+
+footer p {
+    text-align: justify;
+}
+
+footer li, footer ul {
+    list-style-type: none;
+    padding: 0px;
 }
