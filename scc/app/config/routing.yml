@@ -13,6 +13,3 @@ fos_js_routing:
 
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
-
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
