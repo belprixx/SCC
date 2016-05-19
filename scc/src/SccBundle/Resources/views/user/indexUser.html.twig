@@ -1,0 +1,87 @@
+{% extends "SccBundle:Default:index.html.twig" %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <!-- Résumé profile -->
+    <form role="form" id="resumeProfil">
+        <div class="form-group">
+            <label for="firstName">Prénom:</label>
+            <input type="textarea" class="form-control" id="firstName" disabled>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Nom:</label>
+            <input type="textarea" class="form-control" id="lastName" disabled>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse mail:</label>
+            <input type="email" class="form-control" id="email" disabled>
+        </div>
+        <div>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Profile complet</button>
+        </div>
+    </form>
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- Profile complet -->
+                    <h4 class="modal-title">Profile</h4>
+                </div>
+                <form role="form" id="resumeProfil">
+                    <div class="form-group">
+                        <label for="login">Login:</label>
+                        <input type="textarea" class="form-control" id="login" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">Prénom:</label>
+                        <input type="textarea" class="form-control" id="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Nom:</label>
+                        <input type="textarea" class="form-control" id="lastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse mail:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Date of Birth</label>
+                        <input type="date" class="form-control" id="birthDate" placeholder="Date de naissance">
+                    </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" id="lastSubmissions">
+        <h1>
+            LES DERNIERES CANDIDATURES
+        </h1>
+    </div>
+
+    <div class="row">
+        <div id="calendarUserIndex" class="col-md-6">
+            {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
+        </div>
+        <div id="uploadFiles" class="col-md-6">
+            <h3>Ajout fichiers</h3>
+            <p>
+                ICI on peut ajouter des tas de fichiers. Genre les RIB, les justificatifs, toussah quoi. C'est un peu la fête.
+                Mais bon, pour l'instan ça ne marche pas car c'est Théo qui a dit qu'on gèrait pas les fichiers pour le moments.
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

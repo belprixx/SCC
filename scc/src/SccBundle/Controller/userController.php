@@ -8,22 +8,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class userController extends Controller
 {
     /**
-     * @Route("/user/")
-     */
-    public function profilAction()
-    {
-        return $this->render('SccBundle:user:profil.html.twig', array(
-            // ...
-        ));
-    }
-    /**
-     * @Route("/user/profil")
+     * @Route("/user", name="indexUser")
      */
     public function indexAction()
     {
-        return $this->render('SccBundle:user:profil.html.twig', array(
-            // ...
+        return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
         ));
     }
-
+    
 }
