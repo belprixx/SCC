@@ -8,13 +8,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class adminController extends Controller
 {
     /**
-     * @Route("/admin")
+     * @Route("/admin", name="indexAdmin")
      */
     public function adminAction()
     {
-        return $this->render('SccBundle:admin:admin.html.twig', array(
-            // ...
-        ));
+        return $this->render('SccBundle:admin:admin.html.twig');
     }
 
 }

@@ -22,7 +22,11 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{ path('indexUser') }}">Mon profil</a></li>
+                            {% if is_granted('ROLE_USER') %}
+                                <li><a href="{{ path('indexUser') }}">Mon profil</a></li>
+                            {% elseif is_granted('SUPER_ADMIN') %}
+                                <li><a href="{{ path('indexAdmin') }}">Admin</a></li>
+                            {% endif %}
                             <li><a href="{{ path('indexCandidature') }}">Candidatures</a></li>
                             <li><a href="#/forum">Forum</a></li>
                             <li><a href="{{ path('indexAgenda') }}">Agenda</a></li>
