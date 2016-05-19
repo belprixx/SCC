@@ -3,14 +3,52 @@
 {% block title %}FAQ{% endblock %}
 
 {% block body %}
-    <h1>Frequently Asked Question (FAQ)</h1>
-    <ul>
-        <li><a href="#">How can I update my profile?</a></li>
-        <li><a href="#">What can I do to protect my account?</a></li>
-        <li><a href="#">How can I recover my password?</a></li>
-        <li><a href="#">Where can I get settings for my submissions?</a></li>
-        <li><a href="#">How do I copy my schedule to my phone?</a></li>
-        <li><a href="#">How can I upload a video?</a></li>
-        <li><a href="#">How can I send an item via Bluetooth or WiFi on my device?</a></li>
-    </ul>
+
+    <div class="container facture">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h3>Frequently Asked Question (FAQ)</h3>
+                        </div>
+                        <ul class="">
+                            <li><a href="#">How can I update my profile?</a></li>
+                            <li><a href="#">What can I do to protect my account?</a></li>
+                            <li><a href="#">How can I recover my password?</a></li>
+                            <li><a href="#">Where can I get settings for my submissions?</a></li>
+                            <li><a href="#">How do I copy my schedule to my phone?</a></li>
+                            <li><a href="#">How can I upload a video?</a></li>
+                            <li><a href="#">How can I send an item via Bluetooth or WiFi on my device?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <p class="navbar-text pull-left">
+                    <span><a href="#contact" data-toggle="modal">Informations</a></span><br />
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact">Contactez-nous</a>
+                </p>
+                <p class="navbar-text pull-right">
+                    <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}
