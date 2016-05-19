@@ -6,9 +6,13 @@ scc:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+    prefix:  /app
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
