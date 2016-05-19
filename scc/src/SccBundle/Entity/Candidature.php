@@ -80,7 +80,7 @@ class Candidature
     /**
      * @var int
      *
-     * @ORM\Column(name="type_id", type="integer")
+     * @ORM\Column(name="type_id", type="string", length=255)
      */
     private $typeId;
 
@@ -290,7 +290,7 @@ class Candidature
     /**
      * Set typeId
      *
-     * @param integer $typeId
+     * @param string $typeId
      *
      * @return Candidature
      */
@@ -304,7 +304,7 @@ class Candidature
     /**
      * Get typeId
      *
-     * @return int
+     * @return string
      */
     public function getTypeId()
     {
