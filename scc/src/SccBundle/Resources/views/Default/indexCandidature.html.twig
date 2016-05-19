@@ -8,19 +8,17 @@
     <div class="navbar navbar-inverse">
         <div class="navbar-inner">
             <div class="nav-collapse">
-
-
                 <ul class="nav pull-left">
-                    <li>
+                    <li class="candidature">
                         <a href="#/detail">Mes Candidatures</a>
                     </li>
                 </ul>
                 <ul class="nav pull-left">
-                    <li>
+                    <li class="candidature">
                         <a href="#/search">Rechercher des annonces</a>
                     </li>
                 </ul>
-                <ul class="nav pull-left">
+                <ul class="nav pull-left candidature">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">Ajouter<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -38,5 +36,30 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block footer %}
+
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <p class="navbar-text pull-left">
+                    <span><a href="#contact" data-toggle="modal">Informations</a></span><br />
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact">Contactez-nous</a>
+                </p>
+                <p class="navbar-text pull-right">
+                    <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
 {% endblock %}
