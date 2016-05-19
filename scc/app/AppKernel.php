@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new CCDNForum\ForumBundle\CCDNForumForumBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
 
         );
 

@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ asset('bundles/adesignscalendar/css/fullcalendar/fullcalendar.css') }}" />
+        {% block stylesheets %}
+            {% stylesheets  "SccBundle/Assets/css/default.css" filter='cssrewrite' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
+        {% endblock %}
 
     </head>
 
@@ -24,7 +29,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             {% if is_granted('ROLE_USER') %}
                                 <li><a href="{{ path('indexUser') }}">Mon profil</a></li>
-                            {% elseif is_granted('SUPER_ADMIN') %}
+                            {% elseif is_granted('ROLE_SUPER_ADMIN') %}
                                 <li><a href="{{ path('indexAdmin') }}">Admin</a></li>
                             {% endif %}
                             <li><a href="{{ path('indexCandidature') }}">Candidatures</a></li>
@@ -46,7 +51,7 @@
 
         {% block body %}{% endblock %}
 
-            <footer class="navbar navbar-fixed-bottom">
+            <footer class="navbar">
                 <div class="container">
                     <div class="col-md-4">
                         <div class="collapse navbar-collapse navHeaderCollapse">

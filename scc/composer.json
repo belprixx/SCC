@@ -24,7 +24,8 @@
         "friendsofsymfony/jsrouting-bundle": "^1.6",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "adesigns/calendar-bundle": "^1.1",
-        "codeconsortium/ccdn-forum-bundle": "dev-master"
+        "codeconsortium/ccdn-forum-bundle": "dev-master",
+        "symfony/assetic-bundle": "^2.8"
 
     },
     "require-dev": {
