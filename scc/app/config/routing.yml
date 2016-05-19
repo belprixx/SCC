@@ -13,9 +13,12 @@ fos_js_routing:
 
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+<<<<<<< HEAD
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 CCDNForumForumBundle:
     resource: "@CCDNForumForumBundle/Resources/config/routing.yml"
+=======
+>>>>>>> 158c23f8ce933c7e108e98e8516ed1490e3d8173

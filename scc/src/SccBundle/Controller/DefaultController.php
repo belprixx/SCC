@@ -8,13 +8,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="indexDefault")
-     */
-    public function indexAction()
-    {
-        return $this->render('SccBundle:Default:index.html.twig');
-    }
-    /**
      * @Route("/faq", name="indexFaq")
      */
     public function indexFaq()
@@ -27,5 +20,12 @@ class DefaultController extends Controller
     public function indexAgenda()
     {
         return $this->render('SccBundle:Default:indexAgenda.html.twig');
+    }
+    /**
+     * @Route("/candidature", name="indexCandidature")
+     */
+    public function indexCandidature()
+    {
+        return $this->render('SccBundle:Default:indexCandidature.html.twig');
     }
 }
