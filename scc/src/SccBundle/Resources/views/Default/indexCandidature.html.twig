@@ -41,25 +41,36 @@
 
 {% block footer %}
 
-    <footer class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-            <div class="collapse navbar-collapse navHeaderCollapse">
-                <p class="navbar-text pull-left">
-                    <span><a href="#contact" data-toggle="modal">Informations</a></span><br />
-                    MoovOne<br />
-                    9 rue George V<br />
-                    Email: contact@mooveone.com<br />
-                    Tel: 0102030405<br />
-                    <a ng-href="#/contact">Contactez-nous</a>
+<footer class="secondfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p><h3>Informations</h3>
+                MoovOne<br />
+                9 rue George V<br />
+                Email: contact@mooveone.com<br />
+                Tel: 0102030405<br />
+                <a ng-href="#/contact">Contactez-nous</a>
                 </p>
-                <p class="navbar-text pull-right">
+            </div>
+            <div class="col-md-4">
+                <h3>Suivez notre actualité</h3>
+                <ul>
                     <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
                     <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>A propos</h3>
+                <p>
+                    MoovOne lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 {% endblock %}

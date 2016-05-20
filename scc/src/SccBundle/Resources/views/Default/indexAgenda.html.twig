@@ -3,9 +3,11 @@
 {% block title %}Agenda{% endblock %}
 
 {% block body %}
-    {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
-    <div class="agenda"></div>
+    <div class="agenda">
+        {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
+    </div>
 {% endblock %}
+
 {% block javascripts %}
 
     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
