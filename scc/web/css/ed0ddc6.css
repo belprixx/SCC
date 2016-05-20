@@ -1,8 +1,61 @@
+* {
+    font-family: 'Raleway';
+}
+
+/* ----------- Login ----------- */
+
+.bodyLogin img {
+    width: 100%;
+    height: auto%;
+    z-index: 1;
+    margin-top: -1.5%;
+    /*width: 100%;
+    height: 100%;
+    margin-top: -2%;
+    position: absolute;
+    background-image: url("../img/loginBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+#loginModal {
+    margin-top: 10%;
+}
+
 /* ----------- Header ----------- */
 
+.header {
+    background-color: rgba(52,54,66,1);
+}
+
+#backNav {
+    background-color: #fafafa;
+}
+
 .logo {
-    width: 76px;
-    height: 56px;
+    max-width: 5em;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+}
+
+.logo:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+}
+
+.navbar-brand:hover {
+    color: #25b8c5;
+}
+
+.navbar-collapse a {
+    color: rgba(255,255,255,1);
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: rgba(52,54,66,1);
+    color: #25b8c5;
 }
 
 /* ----------- Page User ----------- */
@@ -27,13 +80,30 @@
 
 /* ----------- Footer ----------- */
 
-footer {
-    background-color: #212121;
-    min-height: 170px;
-    color: #9d9d9d;
+.helpBox {
+    padding-bottom: 28%;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(40,40,40,1);
+}
+
+footer{
+    background-color: rgba(40,40,40,1);
+    color: rgba(255,255,255,1);
+    position: absolute;
     margin-bottom: 0;
     width: 100%;
-    position: absolute;
+}
+
+.secondfooter {
+    bottom: 0;
+}
+
+.troisiemefooter {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 0;
 }
 
 footer p {
