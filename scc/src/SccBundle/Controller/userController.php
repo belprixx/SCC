@@ -12,8 +12,8 @@ class userController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
-        ));
+            return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
+            ));
     }
     
 }
