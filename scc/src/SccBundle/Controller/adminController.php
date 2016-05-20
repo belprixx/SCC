@@ -14,7 +14,7 @@ class adminController extends BaseController
      */
     public function adminAction(Request $request)
     {
-        $response = parent::registerAction( $request );
+        //$response = parent::registerAction( $request );
 
         return $this->render('SccBundle:user:indexUser.html.twig');
     }
