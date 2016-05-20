@@ -1,7 +1,35 @@
-{% extends "SccBundle:Default:index.html.twig" %}
+{% block footerAdmin %}
 
-{% block title %}Admin{% endblock %}
+    <footer class="secondfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><h3>Informations</h3>
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact">Contactez-nous</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Suivez notre actualité</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>A propos</h3>
+                    <p>
+                        MoovOne lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-{% block body %}
-<h1>Welcome to the admin:admin page</h1>
 {% endblock %}

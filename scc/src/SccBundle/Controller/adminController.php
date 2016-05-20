@@ -12,7 +12,7 @@ class adminController extends Controller
      */
     public function adminAction()
     {
-        return $this->render('SccBundle:admin:admin.html.twig');
+        return $this->render('SccBundle:user:indexUser.html.twig');
     }
 
 }
