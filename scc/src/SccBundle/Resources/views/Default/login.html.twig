@@ -1,22 +1,96 @@
 {% extends "SccBundle:Default:index.html.twig" %}
+
+{% block header %}
+
+    <!--<header>
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse">
+                        <a class="navbar-brand" href="{{ path('indexUser') }}">INTRA</a>
+                        <a>
+                            <img class="logo img-responsive" src="{{ asset('img/MoovOne.png') }}" alt="logo MoovOne" />
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>-->
+
+{% endblock %}
+
 {% block body %}
+
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <form action="{{ path("login_check") }}" method="post">
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    <div class="bodyLogin">
 
-        <label for="username">Login</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+        <img src="../img/loginBg.jpg">
 
-        <label for="password">Mot de pass</label>
-        <input type="password" id="password" name="_password" required="required" />
+        <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="text-center">Login</h1>
+                        <div class="modal-body">
+                            <form class="form col-md-12 center-block" action="{{ path("login_check") }}" method="post">
+                                <input class="form-control" type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" name="_username" value="{{ last_username }}" required="required" placeholder="Pseudo">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control input-lg" name="_password" required="required" placeholder="Mot de passe">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-lg btn-block">Connexion</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-        <label for="remember_me">Se souvenir de moi</label>
+        <div class="helpBox"></div>
 
-        <input type="submit" id="_submit" name="_submit" value="valider" />
-    </form>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><h3>Informations</h3>
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact">Contactez-nous</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Suivez notre actualité</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>A propos</h3>
+                    <p>
+                        MoovOne lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 {% endblock %}
