@@ -72,4 +72,24 @@ swiftmailer:
 fos_user:
      db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
      firewall_name: main
+<<<<<<< HEAD
      user_class: SccBundle\Entity\user
+=======
+     user_class: SccBundle\Entity\user
+
+# FOSComment Configuration
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: SccBundle\Entity\Comment
+            thread: SccBundle\Entity\Thread
+
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ "SccBundle","FOSCommentBundle" ]
+    filters:
+        cssrewrite: ~
+>>>>>>> d23aeeb2dd222dd6249665ad6b23c01e54583856
