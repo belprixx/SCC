@@ -7,10 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Candidature
  *
- * @ORM\Table(name="candidature")
- * @ORM\Entity(repositoryClass="SccBundle\Repository\CandidatureRepository")
+ * @ORM\Table(name="jobs")
+ * @ORM\Entity(repositoryClass="SccBundle\Repository\jobsRepository")
  */
-class Candidature
+class Jobs
 {
     /**
      * @var int
@@ -59,9 +59,9 @@ class Candidature
     /**
      * @var string
      *
-     * @ORM\Column(name="candidaturecol", type="string", length=45)
+     * @ORM\Column(name="jobscol", type="string", length=45)
      */
-    private $candidaturecol;
+    private $jobscol;
 
     /**
      * @var string
@@ -216,27 +216,27 @@ class Candidature
     }
 
     /**
-     * Set candidaturecol
+     * Set jobscol
      *
-     * @param string $candidaturecol
+     * @param string $jobscol
      *
-     * @return Candidature
+     * @return jobs
      */
-    public function setCandidaturecol($candidaturecol)
+    public function setjobscol($jobscol)
     {
-        $this->candidaturecol = $candidaturecol;
+        $this->jobscol = $jobscol;
 
         return $this;
     }
 
     /**
-     * Get candidaturecol
+     * Get jobscol
      *
      * @return string
      */
-    public function getCandidaturecol()
+    public function getjobscol()
     {
-        return $this->candidaturecol;
+        return $this->jobscol;
     }
 
     /**
