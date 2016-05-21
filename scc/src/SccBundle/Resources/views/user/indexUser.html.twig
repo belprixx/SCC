@@ -4,10 +4,6 @@
 
 {% block body %}
 
-    {% if is_granted('ROLE_SUPER_ADMIN') %}
-        {% include "SccBundle:admin:admin.html.twig" %}
-    {% else %}
-
     <div class="container">
         <!-- Résumé profile -->
         <form role="form" id="resumeProfil">
@@ -129,7 +125,6 @@
             </div>
         </div>
     </div>
-    {% endif %}
 
 {% endblock %}
 
