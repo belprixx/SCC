@@ -2,7 +2,7 @@
 {% block body %}
     <h3>Formulaire d'inscription</h3>
     <div class="">
-        {{ form_start(Registerform, {'attr': {'class': 'form-horizontal'}}) }}
+        {{ form_start(Registerform, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
         {# Les erreurs générales du formulaire. #}
         {{ form_errors(Registerform) }}
         {# Champ Nom#}

@@ -49,6 +49,12 @@ class Register
      */
     private $motivation;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="text", options={"default":"unchecked"})
+     */
+    private $status;
 
     /**
      * Get id
@@ -154,6 +160,29 @@ class Register
     public function getMotivation()
     {
         return $this->motivation;
+    }
+    /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Register
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }
 

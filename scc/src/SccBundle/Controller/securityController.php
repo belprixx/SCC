@@ -18,6 +18,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use SccBundle\Entity\Register;
 
 class securityController extends Controller
@@ -92,7 +93,7 @@ class securityController extends Controller
     /**
      * @Route("/register", name="register")
      */
-    public function registerAction()
+    public function registerAction(Request $request)
     {
         $register = new Register();
 
@@ -102,8 +103,27 @@ class securityController extends Controller
             ->add('Prenom', TextType::class)
             ->add('Email', EmailType::class)
             ->add('Motivation', TextareaType::class)
+            ->add('Status', HiddenType::class, array('data' => 'unckecked'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
+
+        // Si la requête est en POST
+        if ($request->isMethod('POST')) {
+            // On fait le lien Requête <-> Formulaire
+            // À partir de maintenant, la variable $advert contient les valeurs entrées dans le formulaire par le visiteur
+            $form->handleRequest($request);
+            // On vérifie que les valeurs entrées sont correctes
+            // (Nous verrons la validation des objets en détail dans le prochain chapitre)
+            if ($form->isValid()) {
+                // On enregistre notre objet $advert dans la base de données, par exemple
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($register);
+                $em->flush();
+                $request->getSession()->getFlashBag()->add('notice', 'Votre Candidature a bien ete transmise');
+                // On redirige vers la page de visualisation de l'annonce nouvellement créée
+                return $this->redirectToRoute('login', array());
+            }
+        }
 
         return $this->render('SccBundle:Default:register.html.twig', array(
             'Registerform' => $form->createView(),
