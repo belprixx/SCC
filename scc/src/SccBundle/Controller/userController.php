@@ -12,6 +12,10 @@ class userController extends Controller
      */
     public function indexAction()
     {
+        if (($this->container->get('security.context')->isGranted('ROLE_SUPER_ADMIN')))
+        {
+            return $this->redirect('admin');
+        }
             return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
             ));
     }
