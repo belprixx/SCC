@@ -13,6 +13,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use SccBundle\Entity\Register;
 
 class securityController extends Controller
 {
@@ -48,11 +54,6 @@ class securityController extends Controller
 
         if ($this->has('security.csrf.token_manager')) {
             $csrfToken = $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue();
-        } else {
-            // BC for SF < 2.4
-            $csrfToken = $this->has('form.csrf_provider')
-                ? $this->get('form.csrf_provider')->generateCsrfToken('authenticate')
-                : null;
         }
 
         return $this->renderLogin(array(
@@ -88,4 +89,26 @@ class securityController extends Controller
     {
         throw new \RuntimeException('You must activate the logout in your security firewall configuration.');
     }
+    /**
+     * @Route("/register", name="register")
+     */
+    public function registerAction()
+    {
+        $register = new Register();
+
+        // On crée le FormBuilder grâce a la fonction createForm
+        $form = $this->createFormBuilder($register)
+            ->add('Nom', TextType::class)
+            ->add('Prenom', TextType::class)
+            ->add('Email', EmailType::class)
+            ->add('Motivation', TextareaType::class)
+            ->add('save', SubmitType::class, array('label' => 'Valider'))
+            ->getForm();
+
+        return $this->render('SccBundle:Default:register.html.twig', array(
+            'Registerform' => $form->createView(),
+        ));
+    }
+
+
 }
