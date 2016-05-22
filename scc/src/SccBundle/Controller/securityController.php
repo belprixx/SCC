@@ -103,7 +103,7 @@ class securityController extends Controller
             ->add('Prenom', TextType::class)
             ->add('Email', EmailType::class)
             ->add('Motivation', TextareaType::class)
-            ->add('Status', HiddenType::class, array('data' => 'unckecked'))
+            ->add('Status', HiddenType::class, array('data' => 'unchecked'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
 

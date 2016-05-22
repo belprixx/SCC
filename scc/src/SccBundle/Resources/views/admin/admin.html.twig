@@ -1,6 +1,21 @@
 {% extends "SccBundle:Default:index.html.twig" %}
 
 {% block body %}
+    <h1>Nouvelle Candidature:</h1>
+    {% if Candidatures %}
+        <table>
+            {% for candidature in Candidatures %}
+                <tr>
+                     <td>{{ candidature.nom }}</td>
+                     <td>{{ candidature.prenom }}</td>
+                     <td>{{ candidature.motivation }}</td>
+                     <td>{{ candidature.status }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h3>Aucune nouvelle candidatures</h3>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}
