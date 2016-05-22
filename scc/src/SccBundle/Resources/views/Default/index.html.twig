@@ -64,7 +64,7 @@
                             9 rue George V<br />
                             Email: contact@mooveone.com<br />
                             Tel: 0102030405<br />
-                            <a ng-href="#/contact" class="colorContact">Contactez-nous</a>
+                            <a href="#contact" data-toggle="modal" class="colorContact">Contactez-nous</a>
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -87,6 +87,28 @@
                 </div>
             </div>
         </footer>
+
+            <div class="modal fade" id="contact" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Contact</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged.
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btnProfile" data-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         {% endblock %}
 
