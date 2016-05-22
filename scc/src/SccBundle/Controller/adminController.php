@@ -4,16 +4,20 @@ namespace SccBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use FOS\UserBundle\Controller\RegistrationController as BaseController;
 
-class adminController extends BaseController
+class adminController extends Controller
 {
     /**
      * @Route("/admin", name="indexAdmin")
      */
     public function adminAction()
     {
-        return $this->render('SccBundle:admin:admin.html.twig');
+        $candidature = $this -> getDoctrine()
+            ->getRepository('SccBundle:Register')
+            ->findBy(
+                array('status' => 'unchecked')
+            );
+        return $this->render('SccBundle:admin:admin.html.twig',array('Candidatures' => $candidature));
     }
 
 }
