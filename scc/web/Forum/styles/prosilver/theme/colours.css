@@ -78,7 +78,7 @@ hr {
 }
 
 .bg1 {
-	background-color: #ECF3F7;
+	background-color: #FFFFFF
 }
 
 table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
@@ -86,7 +86,7 @@ table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
 }
 
 .bg2 {
-	background-color: #e1ebf2;
+	background-color: white;
 }
 
 table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
@@ -98,7 +98,7 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
 }
 
 .ucprowbg {
-	background-color: #DCDEE2;
+	background-color: #FFFFFF;
 }
 
 .fieldsbg {
@@ -330,11 +330,11 @@ ul.topiclist dd {
 }
 
 ul.topiclist li.row dt a.subforum.read {
-	background-image: url("./images/subforum_read.gif");
+	background-color: #FFFFFF
 }
 
 ul.topiclist li.row dt a.subforum.unread {
-	background-image: url("./images/subforum_unread.gif");
+	background-color: #FFFFFF
 }
 
 li.row {
