@@ -1,57 +1,107 @@
 {% extends "SccBundle:Default:index.html.twig" %}
 {% block body %}
-    <h3>Formulaire d'inscription</h3>
-    <div class="">
-        {{ form_start(Registerform, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
-        {# Les erreurs générales du formulaire. #}
-        {{ form_errors(Registerform) }}
-        {# Champ Nom#}
-        <div class="form-group">
-            {# Génération du label. #}
-            {{ form_label(Registerform.Nom, "Nom:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-            {# Affichage des erreurs pour ce champ précis. #}
-            {{ form_errors(Registerform.Nom) }}
-            <div class="col-sm-4">
-                {# Génération de l'input. #}
-                {{ form_widget(Registerform.Nom, {'attr': {'class': 'form-control'}}) }}
+
+    <div class="container centerForm">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h3 class="titleForm">Formulaire d'inscription</h3>
+                        </div>
+                        <div class="">
+                            {{ form_start(Registerform, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
+                            {# Les erreurs générales du formulaire. #}
+                            {{ form_errors(Registerform) }}
+                            {# Champ Nom#}
+                            <div class="form-group">
+                                {# Génération du label. #}
+                                {{ form_label(Registerform.Nom, "Nom :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(Registerform.Nom) }}
+                                <div class="col-md-8">
+                                    {# Génération de l'input. #}
+                                    {{ form_widget(Registerform.Nom, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                            {# Champ Prenom #}
+                            <div class="form-group">
+                                {{ form_label(Registerform.Prenom, "Prénom :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                                {{ form_errors(Registerform.Prenom) }}
+                                <div class="col-sm-8">
+                                    {{ form_widget(Registerform.Prenom, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                            {# Champ Email #}
+                            <div class="form-group">
+                                {{ form_label(Registerform.Email, "Email :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                                {{ form_errors(Registerform.Email) }}
+                                <div class="col-sm-8">
+                                    {{ form_widget(Registerform.Email, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                            {# Champ Motivation #}
+                            <div class="form-group">
+                                {{ form_label(Registerform.Motivation, "Motivation :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                                {{ form_errors(Registerform.Motivation) }}
+                                <div class="col-sm-8">
+                                    {{ form_widget(Registerform.Motivation, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                            {# Submit #}
+                            {{ form_widget(Registerform.save, {'attr': {'class': 'btn btn-primary btnProfile pull-right'}}) }}
+
+                            {# Génération automatique des champs pas encore écrits.
+                               Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                               et tous les champs cachés (type « hidden »). #}
+                            {{ form_rest(Registerform) }}
+
+                            {# Fermeture de la balise <form> du formulaire HTML #}
+                            {{ form_end(Registerform) }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        {# Champ Prenom #}
-        <div class="form-group">
-            {{ form_label(Registerform.Prenom, "Prenom:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-            {{ form_errors(Registerform.Prenom) }}
-            <div class="col-sm-4">
-                {{ form_widget(Registerform.Prenom, {'attr': {'class': 'form-control'}}) }}
-            </div>
-        </div>
-
-        {# Champ Email #}
-        <div class="form-group">
-            {{ form_label(Registerform.Email, "Email:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-            {{ form_errors(Registerform.Email) }}
-            <div class="col-sm-4">
-                {{ form_widget(Registerform.Email, {'attr': {'class': 'form-control'}}) }}
-            </div>
-        </div>
-
-        {# Champ Motivation #}
-        <div class="form-group">
-            {{ form_label(Registerform.Motivation, "Motivation:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-            {{ form_errors(Registerform.Motivation) }}
-            <div class="col-sm-4">
-                {{ form_widget(Registerform.Motivation, {'attr': {'class': 'form-control'}}) }}
-            </div>
-        </div>
-
-        {# Submit #}
-        {{ form_widget(Registerform.save, {'attr': {'class': 'btn btn-primary'}}) }}
-
-        {# Génération automatique des champs pas encore écrits.
-           Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-           et tous les champs cachés (type « hidden »). #}
-        {{ form_rest(Registerform) }}
-
-        {# Fermeture de la balise <form> du formulaire HTML #}
-        {{ form_end(Registerform) }}
     </div>
+
+{% endblock %}
+
+{% block footer %}
+
+    <footer class="secondfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><h3>Informations</h3>
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact" class="colorContact">Contactez-nous</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Suivez notre actualité</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/moovone" class="centerIconSpecial"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/+MoovoneEu/" class="centerIcons"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>À propos</h3>
+                    <p>
+                        Chez MoovOne, nous pensons qu’il faut permettre un accompagnement individualisé des managers
+                        de proximité pour augmenter l’efficacité d’action de développement des compétences,
+                        de conduite du changement ou l’amélioration générale des équipes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}
