@@ -147,6 +147,22 @@
 
 /* ----------- Pages User et Admin ----------- */
 
+/* Nouvelles candidatures */
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
 /* Profil */
 
 .btnProfile {
