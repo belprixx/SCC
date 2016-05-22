@@ -8,84 +8,77 @@
         <!-- Résumé profile -->
         <form role="form" id="resumeProfil">
             <div class="form-group">
-                <label for="firstName">Prénom:</label>
-                <input type="textarea" class="form-control" id="firstName" disabled>
+                <label for="firstName"></label>
+                <input type="textarea" class="form-control" id="firstName" placeholder="Prénom" disabled>
             </div>
             <div class="form-group">
-                <label for="lastName">Nom:</label>
-                <input type="textarea" class="form-control" id="lastName" disabled>
+                <label for="lastName"></label>
+                <input type="textarea" class="form-control" id="lastName" placeholder="Nom" disabled>
             </div>
             <div class="form-group">
-                <label for="email">Adresse mail:</label>
-                <input type="email" class="form-control" id="email" disabled>
+                <label for="email"></label>
+                <input type="email" class="form-control" id="email" placeholder="prenom.nom@gmail.com" disabled>
             </div>
-            <div>
+            <div class="btnProfile">
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Profile complet</button>
+                <button type="button" class="btn btn-info btn-lg pull-right btnProfile"
+                        data-toggle="modal" data-target="#myModal">Profil complet</button>
             </div>
         </form>
     </div>
 
 
     <!-- Modal -->
-    <div class="container">
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <!-- Profile complet -->
-                        <h4 class="modal-title">Profile</h4>
+                        <h4 class="titleProfile">Mon profil</h4>
                     </div>
-                    <form role="form" id="resumeProfil">
+                    <div class="modal-body">
                         <div class="form-group">
-                            <label for="login">Login:</label>
-                            <input type="textarea" class="form-control" id="login" disabled>
+                            <label for="loginProfil" class="col-lg-3 control-label">Login :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="loginProfil" placeholder="UserOne" disabled>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="firstName">Prénom:</label>
-                            <input type="textarea" class="form-control" id="firstName">
+                            <label for="prenomProfil" class="col-lg-3 control-label">Prénom :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="prenomProfil" placeholder="Prénom" disabled>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Nom:</label>
-                            <input type="textarea" class="form-control" id="lastName">
+                            <label for="nomProfil" class="col-lg-3 control-label">Nom :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="nomProfil" placeholder="Nom" disabled>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Adresse mail:</label>
-                            <input type="email" class="form-control" id="email">
+                            <label for="emailProfil" class="col-lg-3 control-label">Email :</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="emailProfil" placeholder="prenom.nom@gmail.com" disabled>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="birthDate">Date of Birth</label>
-                            <input type="date" class="form-control" id="birthDate" placeholder="Date de naissance">
+                            <label for="dateProfil" class="col-lg-3 control-label">Naissance :</label>
+                            <div class="col-lg-9">
+                                <input type="date" class="form-control" id="dateProfil" disabled>
+                            </div>
                         </div>
+                        <div class="form-group">
+                            <label for="candidatureProfil" class="col-lg-3 control-label">Candidatures :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="candidatureProfil" placeholder="2" disabled>
+                            </div>
+                        </div>
+                    </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <button type="submit" class="btn btn-primary btnProfile">Valider</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row" id="lastSubmissions">
-            <h1>
-                LES DERNIERES CANDIDATURES
-            </h1>
-        </div>
-
-        <div class="row">
-            <div id="calendarUserIndex" class="col-md-6">
-                {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
-            </div>
-            <div id="uploadFiles" class="col-md-6">
-                <h3>Ajout fichiers</h3>
-                <p>
-                    ICI on peut ajouter des tas de fichiers. Genre les RIB, les justificatifs, toussah quoi. C'est un peu la fête.
-                    Mais bon, pour l'instan ça ne marche pas car c'est Théo qui a dit qu'on gèrait pas les fichiers pour le moments.
-                </p>
+                </form>
             </div>
         </div>
     </div>
@@ -110,18 +103,37 @@
                             <li><a href="#">Décembre 2015</a></li>
                             <li><a href="#">Novembre 2015</a></li>
                             <li><a href="#">Octobre 2015</a></li>
-                            <li><a href="#">Septembre 2015</a></li>
-                            <li><a href="#">Août 2015</a></li>
-                            <li><a href="#">Juillet 2015</a></li>
-                            <li><a href="#">Juin 2015</a></li>
-                            <li><a href="#">Mai 2015</a></li>
-                            <li><a href="#">Avril 2015</a></li>
-                            <li><a href="#">Mars 2015</a></li>
-                            <li><a href="#">Février 2015</a></li>
-                            <li><a href="#">Janvier 2015</a></li>
-                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dernières candidatures -->
+
+    <div class="container" id="lastSubmissions">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Mes dernières candidatures</h3>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload de fichiers -->
+
+
+    <div class="container" id="divFile">
+        <div class="row">
+            <div id="calendarUserIndex" class="col-md-6">
+                {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
+            </div>
+            <div id="uploadFiles" class="col-md-6">
+                <h3>Mes documents</h3>
+                <p>À venir</p>
             </div>
         </div>
     </div>

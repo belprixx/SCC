@@ -66,7 +66,149 @@
     margin-top: 10%;
 }
 
-/* ----------- Page User ----------- */
+.btnLogin {
+    background-color: #25b8c5;
+    border-color: #25b8c5;
+}
+
+.btnLogin:hover {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:focus {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:active {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:active:focus {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.titleLogin {
+    color: rgba(52,54,66,1);
+}
+
+.joinUs {
+    color: #8e8e9d;
+}
+
+.joinUs:hover {
+    color: #8e8e9d;
+}
+
+.joinUs:link {
+    color: #8e8e9d;
+}
+
+.joinUs:visited {
+    color: rgba(52,54,66,1);
+}
+
+#boxFooter {
+    height: 10px;
+    width: 10px;
+    background-color: #5eb5e0;
+    z-index: 1;
+}
+
+/* ----------- Nous rejoindre ----------- */
+
+.titleForm {
+    text-align: center;
+}
+
+.centerForm {
+    width: auto;
+    margin-left: 30%;
+}
+
+/*@media screen and (max-width: 1000px) and (min-width: 0px) {
+    .centerForm {
+        margin-bottom: 50%;
+    }
+}
+
+/*@media screen and (max-width: 1000px) and (min-width: 0px) {
+    #footerRegister {
+        margin-top: 50%;
+    }
+}*/
+
+/* ----------- Pages User et Admin ----------- */
+
+/* Nouvelles candidatures */
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+/* Profil */
+
+.btnProfile {
+    background-color: rgba(52,54,66,1);
+    border-color: rgba(52,54,66,1);
+}
+
+.btnProfile:hover {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:focus {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:active {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:active:focus {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.titleProfile {
+    text-align: center;
+}
+
+#lastSubmissions {
+    margin-bottom: 2%;
+}
+
+#divFile {
+    margin-bottom: 2%;
+}
+
+#uploadFiles {
+    text-align: center;
+}
 
 /* Facture */
 
@@ -76,14 +218,59 @@
 
 /* Candidature */
 
-.candidature {
-    color: #9d9d9d;
+.colorLink {
+    color: rgba(40,40,40,1);
+    text-align: center;
+}
+
+.colorLink:hover {
+    color: #5d5d5d;
+}
+
+.btnSearch {
+    color: #ffffff;
+    background-color: #636376;
+    border-color: #636376;
+}
+
+.btnSearch:hover {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:focus {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:active {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:active:focus {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
 }
 
 /* Agenda */
 
 .agenda {
     margin-bottom: 2%;
+}
+
+/* FAQ */
+
+.titleFaq {
+    text-align: center;
 }
 
 /* ----------- Footer ----------- */
@@ -107,13 +294,6 @@ footer{
     bottom: 0;
 }
 
-.troisiemefooter {
-    display: block;
-    box-sizing: border-box;
-    padding-top: 50px;
-    padding-bottom: 0;
-}
-
 footer p {
     text-align: justify;
 }
@@ -121,4 +301,32 @@ footer p {
 footer li, footer ul {
     list-style-type: none;
     padding: 0px;
+}
+
+.colorContact {
+    color: #25b8c5;
+}
+
+.colorContact:hover {
+    color: #8cedf6;
+}
+
+.centerIcons {
+    padding-right: 2%;
+    padding-left: 2%;
+    color: #25b8c5;
+}
+
+.centerIconSpecial {
+    padding-right: 2%;
+    padding-left: 5%;
+    color: #25b8c5;
+}
+
+.centerIcons:hover {
+    color: #8cedf6;
+}
+
+.centerIconSpecial:hover {
+    color: #8cedf6;
 }

@@ -4,73 +4,75 @@
 
 {% block body %}
 
-<div class="container">
-    <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-            <div class="nav-collapse">
-                <ul class="nav pull-left">
-                    <li class="candidature">
-                        <a href="#/detail">Mes Candidatures</a>
-                    </li>
-                </ul>
-                <ul class="nav pull-left">
-                    <li class="candidature">
-                        <a href="#/search">Rechercher des annonces</a>
-                    </li>
-                </ul>
-                <ul class="nav pull-left candidature">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Ajouter<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#/offer/new">Candidature</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form pull-right">
-                    <input type="text" placeholder="Recherche rapide" class="ng-pristine ng-valid">
-                    <button type="submit" class="btn">Rechercher</button>
-                </form>
+
+    <div class="container facture">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="navbar navSubmission">
+                            <div class="navbar-inner">
+                                <div class="nav-collapse">
+                                    <ul class="nav pull-left col-md-1.5">
+                                        <li class="colorBtnSubmission">
+                                            <a href="#/detail" class="colorLink">Mes contrats</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav pull-left col-md-2.5">
+                                        <li>
+                                            <a href="#/search" class="colorLink">Rechercher des annonces</a>
+                                        </li>
+                                    </ul>
+                                    <form class="navbar-form navbar-right col-md-3" role="search">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Recherche rapide">
+                                        </div>
+                                        <button type="submit" class="btn btnSearch">Rechercher</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block footer %}
 
-<footer class="secondfooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <p><h3>Informations</h3>
-                MoovOne<br />
-                9 rue George V<br />
-                Email: contact@mooveone.com<br />
-                Tel: 0102030405<br />
-                <a ng-href="#/contact">Contactez-nous</a>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h3>Suivez notre actualité</h3>
-                <ul>
-                    <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-                    <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>A propos</h3>
-                <p>
-                    MoovOne lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                </p>
+    <footer class="secondfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><h3>Informations</h3>
+                    MoovOne<br />
+                    9 rue George V<br />
+                    Email: contact@mooveone.com<br />
+                    Tel: 0102030405<br />
+                    <a ng-href="#/contact" class="colorContact">Contactez-nous</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Suivez notre actualité</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/moovone" class="centerIconSpecial"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/+MoovoneEu/" class="centerIcons"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>À propos</h3>
+                    <p>
+                        Chez MoovOne, nous pensons qu’il faut permettre un accompagnement individualisé des managers
+                        de proximité pour augmenter l’efficacité d’action de développement des compétences,
+                        de conduite du changement ou l’amélioration générale des équipes.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 {% endblock %}
