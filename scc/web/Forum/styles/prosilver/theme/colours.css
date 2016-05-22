@@ -18,7 +18,7 @@ h2 {
 
 h3 {
 	border-bottom-color: #CCCCCC;
-	color: #115098;
+	color: #1e1b1b;
 }
 
 hr {
@@ -53,17 +53,15 @@ hr {
 }
 
 .navbar {
-	background-color: #cadceb;
+	background-color: #dddddd;
 }
 
 .forabg {
-	background-color: #0076b1;
-	background-image: url("./images/bg_list.gif");
+	background-color:  rgba(52,54,66,1);
 }
 
 .forumbg {
-	background-color: #12A3EB;
-	background-image: url("./images/bg_header.gif");
+	background-color:  rgba(52,54,66,1);
 }
 
 .panel {
@@ -245,7 +243,7 @@ p.post-notice.reported:before, p.post-notice.error:before {
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
 
-a { color: #105289; }
+a { color: #1e1b1b; }
 a:hover	{ color: #D31141; }
 
 /* Links on gradient backgrounds */
@@ -315,8 +313,7 @@ Colours and backgrounds for content.css
 -------------------------------------------------------------- */
 
 ul.forums {
-	background-color: #eef5f9;
-	background-image: url("./images/gradient.gif");
+	background-color: #eeeeee;
 }
 
 ul.topiclist li {
@@ -350,8 +347,7 @@ li.row strong {
 }
 
 li.row:hover {
-	background-color: #F6F4D0;
-}
+	background-color: #dddddd;}
 
 li.row:hover dd {
 	border-left-color: #CCCCCC;
@@ -629,7 +625,7 @@ Colours and backgrounds for buttons.css
 
 .dropdown-visible .dropdown-select, .dropdown-visible .dropdown-select:hover, .nojs .dropdown-container:hover .dropdown-select {
 	border-color: #A6B2BA;
-	color: #105289;
+	color: #1e1b1b;
 }
 
 .contact-icons a		{ border-color: #DCDCDC; }
