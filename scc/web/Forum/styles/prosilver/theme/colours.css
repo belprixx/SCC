@@ -48,8 +48,7 @@ hr {
 }
 
 .headerbar {
-	background-color: #12A3EB;
-	background-image: url("./images/bg_header.gif");
+	background-color: rgba(52,54,66,1);
 	color: #FFFFFF;
 }
 
