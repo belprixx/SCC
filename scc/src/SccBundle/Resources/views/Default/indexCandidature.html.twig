@@ -1,0 +1,76 @@
+{% extends "SccBundle:Default:index.html.twig" %}
+
+{% block title %}Candidatures{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="nav-collapse">
+                <ul class="nav pull-left">
+                    <li class="candidature">
+                        <a href="#/detail">Mes Candidatures</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-left">
+                    <li class="candidature">
+                        <a href="#/search">Rechercher des annonces</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-left candidature">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Ajouter<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#/offer/new">Candidature</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form pull-right">
+                    <input type="text" placeholder="Recherche rapide" class="ng-pristine ng-valid">
+                    <button type="submit" class="btn">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<footer class="secondfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p><h3>Informations</h3>
+                MoovOne<br />
+                9 rue George V<br />
+                Email: contact@mooveone.com<br />
+                Tel: 0102030405<br />
+                <a ng-href="#/contact">Contactez-nous</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>Suivez notre actualité</h3>
+                <ul>
+                    <a href="https://www.facebook.com/moovone"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/moovone"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/+MoovoneEu/"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>A propos</h3>
+                <p>
+                    MoovOne lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

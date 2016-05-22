@@ -8,22 +8,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class userController extends Controller
 {
     /**
-     * @Route("/user/")
-     */
-    public function profilAction()
-    {
-        return $this->render('SccBundle:user:profil.html.twig', array(
-            // ...
-        ));
-    }
-    /**
-     * @Route("/user/profil")
+     * @Route("/", name="indexUser")
      */
     public function indexAction()
     {
-        return $this->render('SccBundle:user:profil.html.twig', array(
-            // ...
-        ));
+        if (($this->container->get('security.context')->isGranted('ROLE_SUPER_ADMIN')))
+        {
+            return $this->redirect('admin');
+        }
+            return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
+            ));
     }
-
+    
 }

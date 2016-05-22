@@ -1,0 +1,57 @@
+{% extends "SccBundle:Default:index.html.twig" %}
+{% block body %}
+    <h3>Formulaire d'inscription</h3>
+    <div class="">
+        {{ form_start(Registerform, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
+        {# Les erreurs générales du formulaire. #}
+        {{ form_errors(Registerform) }}
+        {# Champ Nom#}
+        <div class="form-group">
+            {# Génération du label. #}
+            {{ form_label(Registerform.Nom, "Nom:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            {# Affichage des erreurs pour ce champ précis. #}
+            {{ form_errors(Registerform.Nom) }}
+            <div class="col-sm-4">
+                {# Génération de l'input. #}
+                {{ form_widget(Registerform.Nom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        {# Champ Prenom #}
+        <div class="form-group">
+            {{ form_label(Registerform.Prenom, "Prenom:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            {{ form_errors(Registerform.Prenom) }}
+            <div class="col-sm-4">
+                {{ form_widget(Registerform.Prenom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        {# Champ Email #}
+        <div class="form-group">
+            {{ form_label(Registerform.Email, "Email:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            {{ form_errors(Registerform.Email) }}
+            <div class="col-sm-4">
+                {{ form_widget(Registerform.Email, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        {# Champ Motivation #}
+        <div class="form-group">
+            {{ form_label(Registerform.Motivation, "Motivation:", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            {{ form_errors(Registerform.Motivation) }}
+            <div class="col-sm-4">
+                {{ form_widget(Registerform.Motivation, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        {# Submit #}
+        {{ form_widget(Registerform.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+        {# Génération automatique des champs pas encore écrits.
+           Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+           et tous les champs cachés (type « hidden »). #}
+        {{ form_rest(Registerform) }}
+
+        {# Fermeture de la balise <form> du formulaire HTML #}
+        {{ form_end(Registerform) }}
+    </div>
+{% endblock %}
