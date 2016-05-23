@@ -37,6 +37,13 @@
             </div>
         </div>
     </div>
+    {% for Job in Jobs %}
+        {{ Job.titre }}
+        {{ Job.resume }}
+        {{ Job.duration }}
+        {{ Job.startDate|date('Y-m-d') }}
+        {{ Job.nbCoach }}
+    {% endfor %}
 
 {% endblock %}
 

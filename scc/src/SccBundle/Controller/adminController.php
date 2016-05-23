@@ -68,20 +68,19 @@ class adminController extends Controller
      */
     public function addUserAction($id)
     {
-        $candidature = $this -> getDoctrine()
-            ->getRepository('SccBundle:Register')
-            ->findBy(
-                array('id' => $id)
-            );
-        return $this->redirect('');
+        $em = $this->getDoctrine()->getManager();
+        $candidature = $em->getRepository('SccBundle:Register')->find($id);
 
+        $candidature->setStatus('checked');
+        $em->flush();
+        return $this->redirect($this->generateUrl('indexAdmin'));
     }
     /**
      * @Route("/admin/removeUser/{id}", name="removeUser", requirements={"id" = "\d+"})
      */
     public function removeUserAction($id)
     {
-        return $this->redirect('admin');
+        return $this->redirect($this->generateUrl('indexAdmin'));
     }
 
 
