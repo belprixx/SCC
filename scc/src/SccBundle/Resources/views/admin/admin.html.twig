@@ -11,7 +11,21 @@
                     <div class="page-header">
                         <h3 class="titleSubmission">Nouvelles candidatures</h3>
                     </div>
+
                     {% if Candidatures %}
+                        <div class="col-md-3">
+                            <b>NOM</b>
+                        </div>
+                        <div class="col-md-3">
+                            <b>PRÉNOM</b>
+                        </div>
+                        <div class="col-md-3">
+                            <b>MOTIVATIONS</b>
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <br><br>
                             {% for candidature in Candidatures %}
                                 <div class="col-md-3" id="spaceCandidature">
                                     {{ candidature.nom }}
@@ -23,17 +37,14 @@
                                     {{ candidature.motivation }}
                                 </div>
                                 <div class="col-md-3" id="spaceCandidature">
-                                    <a href="{{ path('removeUser', {'id' :  candidature.id }) }}" class="btn btnRefuser">
-                                        <!--<button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">Refuser</button>-->
-                                    </a>
-                                    <a href="{{ path('addUser', {'id' :  candidature.id }) }}" class="btn btnValider">
-                                        <!--<button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>-->
-                                    </a>
+                                    <a href="{{ path('removeUser', {'id' :  candidature.id }) }}" class="btn btnRefuser">Refuser</a>
+                                    &nbsp;&nbsp;
+                                    <a href="{{ path('addUser', {'id' :  candidature.id }) }}" class="btn btnValider">Valider</a>
                                 </div>
 
                             {% endfor %}
                     {% else %}
-                        <h3>Aucune nouvelle candidatures</h3>
+                        <h4 class="newSubmission"><em>Aucune nouvelle candidatures</em></h4>
                     {% endif %}
                 </div>
             </div>
@@ -85,8 +96,8 @@
                     </div>
                     {# Champ Duration #}
                     <div class="form-group">
-                        {{ form_label(form.Duration, "Durée :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
-                        {{ form_errors(form.Duration) }} en mois
+                        {{ form_label(form.Duration, "Durée (mois) :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.Duration) }}
                         <div class="col-sm-8">
                             {{ form_widget(form.Duration, {'attr': {'class': 'form-control'}}) }}
                         </div>
@@ -110,8 +121,9 @@
                     </div>
 
                     {# Submit #}
-                    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btnProfile pull-right'}}) }}
-
+                    <div class="col-md-11">
+                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btnProfile pull-right'}}) }}
+                    </div>
                     {# Génération automatique des champs pas encore écrits.
                        Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
                        et tous les champs cachés (type « hidden »). #}
