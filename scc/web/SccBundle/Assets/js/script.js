@@ -7,7 +7,7 @@ var main = function() {
 
     })
 };
-
+/*
 $(document).ready(main);
 
 $( "#savechange" ).click(function(event) {
@@ -18,10 +18,10 @@ $( "#savechange" ).click(function(event) {
     var champ4 = document.getElementsByName("champ4")[0].value;
     var champ5 = document.getElementsByName("champ5")[0].value;
 
-    
+
 
 
 
     alert("Changements enregistrés !")
-
+*/
 });
