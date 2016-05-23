@@ -73,13 +73,16 @@ class adminController extends Controller
             ->findBy(
                 array('id' => $id)
             );
+            $candidature->setStatus('checked');
+            $candidature->flush();
+        return $this->redirect($this->generateUrl('indexAdmin'));
     }
     /**
-     * @Route("/admin/removeUser/{id}", name="addUser", requirements={"id" = "\d+"})
+     * @Route("/admin/removeUser/{id}", name="removeUser", requirements={"id" = "\d+"})
      */
     public function removeUserAction($id)
     {
-        return $this->redirect('admin');
+        return $this->redirect($this->generateUrl('indexAdmin'));
     }
 
 
