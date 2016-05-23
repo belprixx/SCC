@@ -16,6 +16,13 @@
     background-color: rgba(52,54,66,1);
 }
 
+#headerPosition {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    border-radius: 7px;
+}
+
 #backNav {
     background-color: #fafafa;
 }
@@ -131,6 +138,7 @@
 .centerForm {
     width: auto;
     margin-left: 30%;
+    margin-top: 5%;
 }
 
 /*@media screen and (max-width: 1000px) and (min-width: 0px) {
@@ -149,17 +157,17 @@
 
 /* Nouvelles candidatures */
 
-table {
+.tableCandidature {
     border-collapse: collapse;
 }
 
-table, th, td {
+.tableCandidature, .tdCandidature {
     border: 1px solid black;
     border-radius: 10px;
     padding-top: 3%;
     padding-bottom: 3%;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 12%;
     text-align: center;
 }
 
@@ -200,6 +208,9 @@ table, th, td {
 
 #lastSubmissions {
     margin-bottom: 2%;
+    border: none;
+    border: 0;
+    border-style: none;
 }
 
 #divFile {

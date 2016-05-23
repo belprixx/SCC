@@ -13,13 +13,13 @@
                     </div>
 
                     {% if Candidatures %}
-                        <table>
+                        <table class="tableCandidature">
                             {% for candidature in Candidatures %}
-                                <tr>
-                                     <td>{{ candidature.nom }} </td>
-                                     <td>{{ candidature.prenom }}</td>
-                                     <td>{{ candidature.motivation }}</td>
-                                     <td>{{ candidature.status }}</td>
+                                <tr class="trCandidature">
+                                     <td class="tdCandidature">{{ candidature.nom }} </td>
+                                     <td class="tdCandidature">{{ candidature.prenom }}</td>
+                                     <td class="tdCandidature">{{ candidature.motivation }}</td>
+                                     <td class="tdCandidature">{{ candidature.status }}</td>
                                 </tr>
                             {% endfor %}
                         </table>
