@@ -5,7 +5,7 @@
 {% block body %}
 
 
-    <div class="container facture">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
@@ -38,21 +38,57 @@
             </div>
         </div>
     </div>
-        <div class="container">
+
+
+    <div class="container">
+        <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-2">
+                            <b>MISSION</b>
+                        </div>
+                        <div class="col-md-2">
+                            <b>OBJECTIF</b>
+                        </div>
+                        <div class="col-md-2">
+                            <b>DURÉE</b>
+                        </div>
+                        <div class="col-md-2">
+                            <b>DÉBUT</b>
+                        </div>
+                        <div class="col-md-2">
+                            <b>COACHS</b>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                        <br><br>
                     {% for Job in Jobs %}
-                        <h4>{{ Job.titre }}</h4>
-                        <h4>Mission :</h4><br>{{ Job.resume }}
-                        <h4>Durée :</h4>{{ Job.duration }} mois
-                        <h4>Date début :</h4>{{ Job.startDate|date('Y-m-d') }}
-                        <h4>Nombre de coach : </h4>{{ Job.nbCoach }}
-                        <hr>
+                        <div class="col-md-2">
+                            {{ Job.titre }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ Job.resume }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ Job.duration }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ Job.startDate|date('Y-m-d') }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ Job.nbCoach }}
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>
+                        </div>
+                        <br><hr>
                     {% endfor %}
-                    </>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
 {% endblock %}
 
