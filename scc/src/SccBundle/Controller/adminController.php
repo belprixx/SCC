@@ -73,9 +73,11 @@ class adminController extends Controller
             ->findBy(
                 array('id' => $id)
             );
+        return $this->redirect('');
+
     }
     /**
-     * @Route("/admin/removeUser/{id}", name="addUser", requirements={"id" = "\d+"})
+     * @Route("/admin/removeUser/{id}", name="removeUser", requirements={"id" = "\d+"})
      */
     public function removeUserAction($id)
     {

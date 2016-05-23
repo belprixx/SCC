@@ -23,10 +23,12 @@
                                     {{ candidature.motivation }}
                                 </div>
                                 <div class="col-md-3" id="spaceCandidature">
-                                    <button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">
-                                        <a href="{{ path('removeUser', {'id' :  candidature.id }) }}">Refuser</a></button>
-                                    <button type="submit" class="btn btn-primary btnValider" id="savechange">
-                                        <a href="{{ path('addUser', {'id' :  candidature.id }) }}">Valider</a></button>
+                                    <a href="{{ path('removeUser', {'id' :  candidature.id }) }}" class="btn btnRefuser">
+                                        <!--<button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">Refuser</button>-->
+                                    </a>
+                                    <a href="{{ path('addUser', {'id' :  candidature.id }) }}" class="btn btnValider">
+                                        <!--<button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>-->
+                                    </a>
                                 </div>
 
                             {% endfor %}
