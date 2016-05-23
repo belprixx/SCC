@@ -68,13 +68,11 @@ class adminController extends Controller
      */
     public function addUserAction($id)
     {
-        $candidature = $this -> getDoctrine()
-            ->getRepository('SccBundle:Register')
-            ->findBy(
-                array('id' => $id)
-            );
-            $candidature->setStatus('checked');
-            $candidature->flush();
+        $em = $this->getDoctrine()->getManager();
+        $candidature = $em->getRepository('SccBundle:Register')->find($id);
+
+        $candidature->setStatus('checked');
+        $em->flush();
         return $this->redirect($this->generateUrl('indexAdmin'));
     }
     /**

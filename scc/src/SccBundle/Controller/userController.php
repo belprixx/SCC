@@ -16,7 +16,7 @@ class userController extends Controller
         {
             return $this->redirect('admin');
         }
-            return $this->render('SccBundle:user:indexUser.html.twig', array(// ...
+            return $this->render('SccBundle:user:indexUser.html.twig', array(
             ));
     }
     

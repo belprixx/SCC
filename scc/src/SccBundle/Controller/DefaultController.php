@@ -26,6 +26,9 @@ class DefaultController extends Controller
      */
     public function indexCandidature()
     {
-        return $this->render('SccBundle:Default:indexCandidature.html.twig');
+        $jobs = $this -> getDoctrine()
+            ->getRepository('SccBundle:Jobs')
+            ->findAll();
+        return $this->render('SccBundle:Default:indexCandidature.html.twig',array('Jobs' => $jobs));
     }
 }
