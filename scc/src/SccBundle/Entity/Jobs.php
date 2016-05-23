@@ -5,10 +5,10 @@ namespace SccBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Candidature
+ * Jobs
  *
  * @ORM\Table(name="jobs")
- * @ORM\Entity(repositoryClass="SccBundle\Repository\jobsRepository")
+ * @ORM\Entity(repositoryClass="SccBundle\Repository\JobsRepository")
  */
 class Jobs
 {
@@ -24,65 +24,51 @@ class Jobs
     /**
      * @var string
      *
-     * @ORM\Column(name="id_user", type="string", length=255)
+     * @ORM\Column(name="Titre", type="string", length=255)
      */
-    private $idUser;
+    private $titre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\Column(name="Resume", type="text")
      */
-    private $title;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date", type="datetime")
-     */
-    private $date;
+    private $resume;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="string", length=255)
-     */
-    private $content;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="status", type="string", length=255)
-     */
-    private $status;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="jobscol", type="string", length=45)
-     */
-    private $jobscol;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="start_date", type="string", length=45)
-     */
-    private $startDate;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="duration", type="string", length=45)
+     * @ORM\Column(name="Duration", type="string", length=255)
      */
     private $duration;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="StartDate", type="datetime")
+     */
+    private $startDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="EndDate", type="datetime")
+     */
+    private $endDate;
+
+    /**
      * @var int
      *
-     * @ORM\Column(name="type_id", type="string", length=255)
+     * @ORM\Column(name="Nb_Coach", type="integer")
      */
-    private $typeId;
+    private $nbCoach;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="id_user", type="array")
+     */
+    private $idUser;
 
 
     /**
@@ -96,171 +82,51 @@ class Jobs
     }
 
     /**
-     * Set title
+     * Set titre
      *
-     * @param string $title
+     * @param string $titre
      *
-     * @return Candidature
+     * @return Jobs
      */
-    public function setTitle($title)
+    public function setTitre($titre)
     {
-        $this->title = $title;
+        $this->titre = $titre;
 
         return $this;
     }
 
     /**
-     * Get title
+     * Get titre
      *
      * @return string
      */
-    public function getTitle()
+    public function getTitre()
     {
-        return $this->title;
+        return $this->titre;
     }
 
     /**
-     * Set date
+     * Set resume
      *
-     * @param \DateTime $date
+     * @param string $resume
      *
-     * @return Candidature
+     * @return Jobs
      */
-    public function setDate($date)
+    public function setResume($resume)
     {
-        $this->date = $date;
+        $this->resume = $resume;
 
         return $this;
     }
 
     /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * Set idUser
-     *
-     * @param string $idUser
-     *
-     * @return Candidature
-     */
-    public function setIdUser($idUser)
-    {
-        $this->idUser = $idUser;
-
-        return $this;
-    }
-
-    /**
-     * Get idUser
+     * Get resume
      *
      * @return string
      */
-    public function getIdUser()
+    public function getResume()
     {
-        return $this->idUser;
-    }
-
-    /**
-     * Set content
-     *
-     * @param string $content
-     *
-     * @return Candidature
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Get content
-     *
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * Set status
-     *
-     * @param string $status
-     *
-     * @return Candidature
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * Get status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    /**
-     * Set jobscol
-     *
-     * @param string $jobscol
-     *
-     * @return jobs
-     */
-    public function setjobscol($jobscol)
-    {
-        $this->jobscol = $jobscol;
-
-        return $this;
-    }
-
-    /**
-     * Get jobscol
-     *
-     * @return string
-     */
-    public function getjobscol()
-    {
-        return $this->jobscol;
-    }
-
-    /**
-     * Set startDate
-     *
-     * @param string $startDate
-     *
-     * @return Candidature
-     */
-    public function setStartDate($startDate)
-    {
-        $this->startDate = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * Get startDate
-     *
-     * @return string
-     */
-    public function getStartDate()
-    {
-        return $this->startDate;
+        return $this->resume;
     }
 
     /**
@@ -268,7 +134,7 @@ class Jobs
      *
      * @param string $duration
      *
-     * @return Candidature
+     * @return Jobs
      */
     public function setDuration($duration)
     {
@@ -288,27 +154,99 @@ class Jobs
     }
 
     /**
-     * Set typeId
+     * Set startDate
      *
-     * @param string $typeId
+     * @param \DateTime $startDate
      *
-     * @return Candidature
+     * @return Jobs
      */
-    public function setTypeId($typeId)
+    public function setStartDate($startDate)
     {
-        $this->typeId = $typeId;
+        $this->startDate = $startDate;
 
         return $this;
     }
 
     /**
-     * Get typeId
+     * Get startDate
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getTypeId()
+    public function getStartDate()
     {
-        return $this->typeId;
+        return $this->startDate;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param \DateTime $endDate
+     *
+     * @return Jobs
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * Set nbCoach
+     *
+     * @param integer $nbCoach
+     *
+     * @return Jobs
+     */
+    public function setNbCoach($nbCoach)
+    {
+        $this->nbCoach = $nbCoach;
+
+        return $this;
+    }
+
+    /**
+     * Get nbCoach
+     *
+     * @return int
+     */
+    public function getNbCoach()
+    {
+        return $this->nbCoach;
+    }
+
+    /**
+     * Set idUser
+     *
+     * @param array $idUser
+     *
+     * @return Jobs
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    /**
+     * Get idUser
+     *
+     * @return array
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
     }
 }
 
