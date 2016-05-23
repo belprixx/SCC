@@ -33,7 +33,7 @@ class adminController extends Controller
                     "4" => 4,
                     "5" => 5),'label' =>'Nombre de Coach'))
             ->add('id_user', HiddenType::class, array('data' => 'null'))
-            ->add('Duration',NumberType::class)
+            ->add('Duration',NumberType::class,array('attr'=>array('placeholder'=>"chiffres")))
             ->add('StartDate',DateType::class)
             ->add('EndDate',DateType::class,array('label'=>'Date de Fin'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
@@ -62,5 +62,15 @@ class adminController extends Controller
             );
         return $this->render('SccBundle:admin:admin.html.twig',array('Candidatures' => $candidature,'form' => $form->createView()));
     }
+    /**
+     * @Route("/admin/addUser/{id}", name="addUser", requirements={"id" = "\d+"})
+     */
+    public function addUserAction($id)
+    {
+        var_dump($id);
+        return $this->redirect('admin');
+    }
+
+
 
 }
