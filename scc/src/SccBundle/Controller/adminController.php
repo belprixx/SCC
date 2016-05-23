@@ -34,7 +34,7 @@ class adminController extends Controller
                     "4" => 4,
                     "5" => 5),'label' =>'Nombre de Coach'))
             ->add('id_user', HiddenType::class, array('data' => 'null'))
-            ->add('Duration',NumberType::class,array('attr'=>array('placeholder'=>"chiffres")))
+            ->add('Duration',NumberType::class,array('attr'=>array('placeholder'=>"chiffre")))
             ->add('StartDate',DateType::class)
             ->add('EndDate',DateType::class,array('label'=>'Date de Fin'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
