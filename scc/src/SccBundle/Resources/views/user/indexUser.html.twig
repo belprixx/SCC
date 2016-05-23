@@ -139,11 +139,16 @@
                         <form class="form-group" action="accueil.html" method="post">
                             <label for="mon_fichier" class="col-md-5 control-label">Tout format | max. 1 Mo :</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                            <input type="file" name="mon_fichier" id="mon_fichier" /><br>
                             <div class="col-md-11">
-                                <button class="btn btn-default btnProfile pull-right" type="button" data-dismiss="modal"> Envoyer</button>
-                                <button class="btn btn-default pull-right" type="button" data-dismiss="modal"> Fermer</button>
+                                <button class="btn btn-info btnProfile pull-right" type="button" data-dismiss="modal">Uploader</button>
+                            </div><br>
+                            <div class="col-md-11">
+                                <label class="btn btn-default btn-file">
+                                    Browse <input type="file" style="display: none;">
+                                </label>
                             </div>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                            <input type="file" name="mon_fichier" id="mon_fichier" /><br>
                         </form>
                     </div>
                 </div>
