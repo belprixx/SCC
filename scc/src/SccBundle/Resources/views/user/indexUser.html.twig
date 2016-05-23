@@ -125,18 +125,32 @@
 
     <!-- Upload de fichiers -->
 
-
     <div class="container" id="divFile">
         <div class="row">
             <div id="calendarUserIndex" class="col-md-6">
                 {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
             </div>
-            <div id="uploadFiles" class="col-md-6">
-                <h3>Mes documents</h3>
-                <p>À venir</p>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h3 class="titleForm">Mes documents</h3><br>
+                        </div>
+                        <form class="form-group" action="accueil.html" method="post">
+                            <label for="mon_fichier" class="col-md-5 control-label">Tout format | max. 1 Mo :</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                            <input type="file" name="mon_fichier" id="mon_fichier" /><br>
+                            <div class="col-md-11">
+                                <button class="btn btn-default btnProfile pull-right" type="button" data-dismiss="modal"> Envoyer</button>
+                                <button class="btn btn-default pull-right" type="button" data-dismiss="modal"> Fermer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 
 {% endblock %}
 
