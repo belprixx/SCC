@@ -37,6 +37,91 @@
     </div>
 </div>
 
+<div class="container centerForm">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h3 class="titleForm">Ajouter Contrat</h3>
+                    </div>
+                    {{ form_start(form, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
+                    {# Les erreurs générales du formulaire. #}
+                    {{ form_errors(form) }}
+                    {# Champ Nom#}
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.Titre, "Titre :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.Titre) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.Titre, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.Resume, "Contenue :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.Resume) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.Resume, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.NbCoach, "Nombre de Coach :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.NbCoach) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.NbCoach, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    {# Champ Duration #}
+                    <div class="form-group">
+                        {{ form_label(form.Duration, "Durée :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.Duration) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.Duration, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    {# Champ StartDate #}
+                    <div class="form-group">
+                        {{ form_label(form.StartDate, "Date de Début :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.StartDate) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.StartDate, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    {# Champ EndDate #}
+                    <div class="form-group">
+                        {{ form_label(form.EndDate, "Date de Fin :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.EndDate) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.EndDate, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    {# Submit #}
+                    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btnProfile pull-right'}}) }}
+
+                    {# Génération automatique des champs pas encore écrits.
+                       Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                       et tous les champs cachés (type « hidden »). #}
+                    {{ form_rest(form) }}
+
+                    {# Fermeture de la balise <form> du formulaire HTML #}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
 {% endblock %}
 
 {% block footer %}

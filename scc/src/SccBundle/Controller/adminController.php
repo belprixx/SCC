@@ -32,18 +32,18 @@ class adminController extends Controller
                     "4" => 4,
                     "5" => 5),'label' =>'Nombre de Coach'))
             ->add('id_user', HiddenType::class, array('data' => 'null'))
-            ->add('Duration',NumberType::class,array('label'=>'Durée'))
-            ->add('StartDate',DateType::HTML5_FORMAT,array('label'=>'Date de début'))
-            ->add('EndDate',DateTimeType::class,array('label'=>'Date de Fin'))
-            ->add('Valider', SubmitType::class, array('label' => 'Valider'))
+            ->add('Duration',NumberType::class)
+            ->add('StartDate',DateType::class)
+            ->add('EndDate',DateType::class,array('label'=>'Date de Fin'))
+            ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
-
+        
         $candidature = $this -> getDoctrine()
             ->getRepository('SccBundle:Register')
             ->findBy(
                 array('status' => 'unchecked')
             );
-        return $this->render('SccBundle:admin:admin.html.twig',array('Candidatures' => $candidature));
+        return $this->render('SccBundle:admin:admin.html.twig',array('Candidatures' => $candidature,'form' => $form->createView()));
     }
 
 }
