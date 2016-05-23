@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <p class="panel-body">
                         <div class="navbar navSubmission">
                             <div class="navbar-inner">
                                 <div class="nav-collapse">
@@ -32,18 +32,27 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {% for Job in Jobs %}
-        {{ Job.titre }}
-        {{ Job.resume }}
-        {{ Job.duration }}
-        {{ Job.startDate|date('Y-m-d') }}
-        {{ Job.nbCoach }}
-    {% endfor %}
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    {% for Job in Jobs %}
+                        <h4>{{ Job.titre }}</h4>
+                        <h4>Mission :</h4><br>{{ Job.resume }}
+                        <h4>Durée :</h4>{{ Job.duration }} mois
+                        <h4>Date début :</h4>{{ Job.startDate|date('Y-m-d') }}
+                        <h4>Nombre de coach : </h4>{{ Job.nbCoach }}
+                        <hr>
+                    {% endfor %}
+                    </>
+                </div>
+            </div>
+        </div>
 
 {% endblock %}
 
