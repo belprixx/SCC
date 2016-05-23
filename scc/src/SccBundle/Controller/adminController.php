@@ -37,8 +37,7 @@ class adminController extends Controller
             ->add('EndDate',DateType::class,array('label'=>'Date de Fin'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
-        /*bug */
-
+        
         $candidature = $this -> getDoctrine()
             ->getRepository('SccBundle:Register')
             ->findBy(

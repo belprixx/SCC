@@ -133,6 +133,7 @@
 
 .titleForm {
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .centerForm {
@@ -141,24 +142,11 @@
     margin-top: 5%;
 }
 
-/*@media screen and (max-width: 1000px) and (min-width: 0px) {
-    .centerForm {
-        margin-bottom: 50%;
-    }
-}
-
-/*@media screen and (max-width: 1000px) and (min-width: 0px) {
-    #footerRegister {
-        margin-top: 50%;
-    }
-}*/
-
-/* ----------- Pages User et Admin ----------- */
-
-/* Nouvelles candidatures */
+/* ----------- Page Admin ----------- */
 
 .titleSubmission {
-    margin-bottom: 3%;
+    margin-bottom: 2%;
+    text-align: center;
 }
 
 #spaceCandidature {
@@ -228,6 +216,11 @@
     outline:none !important;
 }
 
+.addContract {
+}
+
+/* ----------- Pages User ----------- */
+
 /* Profil */
 
 .btnProfile {
@@ -276,6 +269,18 @@
 
 #uploadFiles {
     text-align: center;
+}
+
+#contact {
+    margin-top: 7%;
+}
+
+.colorContact {
+    color: #25b8c5;
+}
+
+.colorContact:hover {
+    color: #8cedf6;
 }
 
 /* Facture */
