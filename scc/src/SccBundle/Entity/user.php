@@ -23,6 +23,34 @@ class user extends BaseUser
     protected $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=255)
+     */
+    protected $login;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
+     */
+    protected $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    protected $nom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="bdate", type="datetime")
+     */
+    protected $bdate;
+
+    /**
      * Get id
      *
      * @return integer 

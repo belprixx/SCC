@@ -16,11 +16,12 @@ $( "#savechange" ).click(function(event) {
     var champ2 = document.getElementsByName("champ2")[0].value;
     var champ3 = document.getElementsByName("champ3")[0].value;
     var champ4 = document.getElementsByName("champ4")[0].value;
+    var champ5 = document.getElementsByName("champ5")[0].value;
 
-    document.getElementById("inputFName").value = champ1;
-    document.getElementById("inputLName").value = champ2;
-    document.getElementById("inputAdress").value = champ3;
-    document.getElementById("inputPhone").value = champ4;
+    
+
+
+
     alert("Changements enregistrés !")
 
 });
