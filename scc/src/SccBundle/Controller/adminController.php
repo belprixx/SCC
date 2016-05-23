@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use SccBundle\Entity\Jobs;
+use SccBundle\Entity\Register;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -67,7 +68,17 @@ class adminController extends Controller
      */
     public function addUserAction($id)
     {
-        var_dump($id);
+        $candidature = $this -> getDoctrine()
+            ->getRepository('SccBundle:Register')
+            ->findBy(
+                array('id' => $id)
+            );
+    }
+    /**
+     * @Route("/admin/removeUser/{id}", name="addUser", requirements={"id" = "\d+"})
+     */
+    public function removeUserAction($id)
+    {
         return $this->redirect('admin');
     }
 
