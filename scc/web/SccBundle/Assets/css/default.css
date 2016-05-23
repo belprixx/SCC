@@ -370,6 +370,10 @@
     outline:none !important;
 }
 
+#jobs {
+    padding-left: 10%;
+}
+
 /* Agenda */
 
 .agenda {
