@@ -39,7 +39,7 @@ class CalendarEventListener
 
         $companyEvents = $this->entityManager->getRepository('SccBundle:addEvent')
             ->createQueryBuilder('addEvent')
-            ->where('addEvent.startDate BETWEEN :startDate and :endDate')
+            ->where('addEvent.event_datetime BETWEEN :startDate and :endDate')
             ->setParameter('startDate', $startDate->format('Y-m-d H:i:s'))
             ->setParameter('endDate', $endDate->format('Y-m-d H:i:s'))
             ->getQuery()->getResult();
