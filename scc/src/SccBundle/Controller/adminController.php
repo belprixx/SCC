@@ -38,7 +38,6 @@ class adminController extends Controller
             ->add('EndDate',DateType::class,array('label'=>'Date de Fin'))
             ->add('save', SubmitType::class, array('label' => 'Valider'))
             ->getForm();
-
         // Si la requête est en POST
         if ($request->isMethod('POST')) {
             // On fait le lien Requête <-> Formulaire
