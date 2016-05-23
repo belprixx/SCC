@@ -157,18 +157,75 @@
 
 /* Nouvelles candidatures */
 
-.tableCandidature {
-    border-collapse: collapse;
+.titleSubmission {
+    margin-bottom: 3%;
 }
 
-.tableCandidature, .tdCandidature {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 5%;
-    padding-right: 12%;
-    text-align: center;
+#spaceCandidature {
+    margin-bottom: 2%;
+}
+
+.btnRefuser {
+    background-color: #e63a56;
+    border-color: #e63a56;
+    color: #ffffff;
+}
+
+.btnRefuser:hover {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:focus {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:active {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:active:focus {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnValider {
+    background-color: #9bc65f;
+    border-color: #9bc65f;
+}
+
+.btnValider:hover {
+    background-color: #bee587;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:focus {
+    background-color: #bee587;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:active {
+    background-color: #bee587;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:active:focus {
+    background-color: #bee587;
+    border-color: #bee587;
+    outline:none !important;
 }
 
 /* Profil */

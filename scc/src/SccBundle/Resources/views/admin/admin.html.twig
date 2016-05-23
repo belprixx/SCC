@@ -3,26 +3,31 @@
 {% block body %}
 
 
-<div class="container facture">
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="page-header">
-                        <h3>Nouvelles candidatures :</h3>
+                        <h3 class="titleSubmission">Nouvelles candidatures :</h3>
                     </div>
-
                     {% if Candidatures %}
-                        <table class="tableCandidature">
                             {% for candidature in Candidatures %}
-                                <tr class="trCandidature">
-                                     <td class="tdCandidature">{{ candidature.nom }} </td>
-                                     <td class="tdCandidature">{{ candidature.prenom }}</td>
-                                     <td class="tdCandidature">{{ candidature.motivation }}</td>
-                                     <td class="tdCandidature">{{ candidature.status }}</td>
-                                </tr>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.nom }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.prenom }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.motivation }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    <button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">Refuser</button>
+                                    <button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>
+                                </div>
+
                             {% endfor %}
-                        </table>
                     {% else %}
                         <h3>Aucune nouvelle candidatures</h3>
                     {% endif %}
