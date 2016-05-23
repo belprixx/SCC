@@ -9,7 +9,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="page-header">
-                        <h3 class="titleSubmission">Nouvelles candidatures :</h3>
+                        <h3 class="titleSubmission">Nouvelles candidatures</h3>
                     </div>
                     {% if Candidatures %}
                             {% for candidature in Candidatures %}
@@ -23,8 +23,12 @@
                                     {{ candidature.motivation }}
                                 </div>
                                 <div class="col-md-3" id="spaceCandidature">
-                                    <button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">Refuser</button>
-                                    <button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>
+                                    <a href="{{ path('removeUser', {'id' :  candidature.id }) }}" class="btn btnRefuser">
+                                        <!--<button type="button" class="btn btn-default btnRefuser" data-dismiss="modal">Refuser</button>-->
+                                    </a>
+                                    <a href="{{ path('addUser', {'id' :  candidature.id }) }}" class="btn btnValider">
+                                        <!--<button type="submit" class="btn btn-primary btnValider" id="savechange">Valider</button>-->
+                                    </a>
                                 </div>
 
                             {% endfor %}
@@ -37,13 +41,13 @@
     </div>
 </div>
 
-<div class="container centerForm">
+<div class="container addContract">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="page-header">
-                        <h3 class="titleForm">Ajouter Contrat</h3>
+                        <h3 class="titleForm">Ajouter un contrat</h3>
                     </div>
                     {{ form_start(form, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
                     {# Les erreurs générales du formulaire. #}
@@ -61,7 +65,7 @@
                     </div>
                     <div class="form-group">
                         {# Génération du label. #}
-                        {{ form_label(form.Resume, "Contenue :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_label(form.Resume, "Contenu :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
                         {# Affichage des erreurs pour ce champ précis. #}
                         {{ form_errors(form.Resume) }}
                         <div class="col-md-8">
@@ -71,7 +75,7 @@
                     </div>
                     <div class="form-group">
                         {# Génération du label. #}
-                        {{ form_label(form.NbCoach, "Nombre de Coach :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_label(form.NbCoach, "Coach(s) :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
                         {# Affichage des erreurs pour ce champ précis. #}
                         {{ form_errors(form.NbCoach) }}
                         <div class="col-md-8">
@@ -82,7 +86,7 @@
                     {# Champ Duration #}
                     <div class="form-group">
                         {{ form_label(form.Duration, "Durée :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
-                        {{ form_errors(form.Duration) }}
+                        {{ form_errors(form.Duration) }} en mois
                         <div class="col-sm-8">
                             {{ form_widget(form.Duration, {'attr': {'class': 'form-control'}}) }}
                         </div>
@@ -90,7 +94,7 @@
 
                     {# Champ StartDate #}
                     <div class="form-group">
-                        {{ form_label(form.StartDate, "Date de Début :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_label(form.StartDate, "Début :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
                         {{ form_errors(form.StartDate) }}
                         <div class="col-sm-8">
                             {{ form_widget(form.StartDate, {'attr': {'class': 'form-control'}}) }}
@@ -98,7 +102,7 @@
                     </div>
                     {# Champ EndDate #}
                     <div class="form-group">
-                        {{ form_label(form.EndDate, "Date de Fin :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_label(form.EndDate, "Fin :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
                         {{ form_errors(form.EndDate) }}
                         <div class="col-sm-8">
                             {{ form_widget(form.EndDate, {'attr': {'class': 'form-control'}}) }}
@@ -121,43 +125,6 @@
     </div>
 </div>
     </div>
-
-{% endblock %}
-
-{% block footer %}
-
-    <footer class="secondfooter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <p><h3>Informations</h3>
-                    MoovOne<br />
-                    9 rue George V<br />
-                    Email: contact@mooveone.com<br />
-                    Tel: 0102030405<br />
-                    <a ng-href="#/contact" class="colorContact">Contactez-nous</a>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Suivez notre actualité</h3>
-                    <ul>
-                        <a href="https://www.facebook.com/moovone" class="centerIconSpecial"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/moovone" class="centerIcons"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-                        <a href="https://plus.google.com/+MoovoneEu/" class="centerIcons"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>À propos</h3>
-                    <p>
-                        Chez MoovOne, nous pensons qu’il faut permettre un accompagnement individualisé des managers
-                        de proximité pour augmenter l’efficacité d’action de développement des compétences,
-                        de conduite du changement ou l’amélioration générale des équipes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 {% endblock %}
 

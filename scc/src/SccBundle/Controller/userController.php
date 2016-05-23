@@ -16,12 +16,16 @@ class userController extends Controller
         {
             return $this->redirect('admin');
         }
+<<<<<<< HEAD
             $user = $this->showAction();
             $email = $user->getEmail();
             $nom = $user->getNom();
             $prenom = $user->getPrenom();
             $username = $user->getUsername();
             return $this->render('SccBundle:user:indexUser.html.twig', array("email"=>$email, "nom"=>$nom, "prenom"=>$prenom, "username"=>$username
+=======
+            return $this->render('SccBundle:user:indexUser.html.twig', array(
+>>>>>>> b5ec14f794d4e8b14c12a5a137fa60238f72380a
             ));
     }
 
