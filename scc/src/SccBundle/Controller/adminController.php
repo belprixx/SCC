@@ -80,6 +80,10 @@ class adminController extends Controller
      */
     public function removeUserAction($id)
     {
+        $em = $this->getDoctrine()->getManager();
+        $candidature = $em->getRepository('SccBundle:Register')->find($id);
+        $em->remove($candidature);
+        $em->flush();
         return $this->redirect($this->generateUrl('indexAdmin'));
     }
 
