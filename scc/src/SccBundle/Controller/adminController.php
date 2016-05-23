@@ -67,7 +67,13 @@ class adminController extends Controller
      */
     public function addUserAction($id)
     {
-        var_dump($id);
+        return $this->redirect('admin');
+    }
+    /**
+     * @Route("/admin/removeUser/{id}", name="addUser", requirements={"id" = "\d+"})
+     */
+    public function removeUserAction($id)
+    {
         return $this->redirect('admin');
     }
 
