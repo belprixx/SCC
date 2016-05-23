@@ -278,6 +278,18 @@
     text-align: center;
 }
 
+#contact {
+    margin-top: 7%;
+}
+
+.colorContact {
+    color: #25b8c5;
+}
+
+.colorContact:hover {
+    color: #8cedf6;
+}
+
 /* Facture */
 
 .facture {
