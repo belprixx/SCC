@@ -49,7 +49,14 @@ class user extends BaseUser
      * @ORM\Column(name="bdate", type="datetime")
      */
     protected $bdate;
-    
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    protected $email;
+
     /**
      * Get id
      *

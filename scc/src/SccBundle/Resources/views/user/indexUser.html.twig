@@ -9,15 +9,15 @@
         <form role="form" id="resumeProfil">
             <div class="form-group">
                 <label for="firstName"></label>
-                <input type="textarea" class="form-control" id="firstName" placeholder="Prénom" disabled>
+                <input type="textarea" class="form-control" id="prenomProfil" placeholder="Prénom" name="champ1" value="{{ prenom }}" disabled>
             </div>
             <div class="form-group">
                 <label for="lastName"></label>
-                <input type="textarea" class="form-control" id="lastName" placeholder="Nom" disabled>
+                <input type="textarea" class="form-control" id="nomProfil" placeholder="Nom" name="champ2" value="{{ nom }}" disabled>
             </div>
             <div class="form-group">
                 <label for="email"></label>
-                <input type="email" class="form-control" id="email" placeholder="prenom.nom@gmail.com" disabled>
+                <input type="email" class="form-control" id="emailProfil" placeholder="prenom.nom@gmail.com" name="champ4" value="{{ email }}" disabled>
             </div>
             <div class="btnProfile">
                 <!-- Trigger the modal with a button -->
@@ -40,31 +40,31 @@
                         <div class="form-group">
                             <label for="loginProfil" class="col-lg-3 control-label">Login :</label>
                             <div class="col-lg-9">
-                                <input type="text" class="form-control" id="loginProfil" placeholder="UserOne" disabled>
+                                <input type="text" class="form-control" id="loginProfil" placeholder="UserOne" name="champ3" value="{{ username }}" disabled >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="prenomProfil" class="col-lg-3 control-label">Prénom :</label>
                             <div class="col-lg-9">
-                                <input type="text" class="form-control" id="prenomProfil" placeholder="Prénom">
+                                <input type="text" class="form-control" id="prenomProfil" name="champ1" placeholder="Prénom" value="{{ prenom }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="nomProfil" class="col-lg-3 control-label">Nom :</label>
                             <div class="col-lg-9">
-                                <input type="text" class="form-control" id="nomProfil" placeholder="Nom">
+                                <input type="text" class="form-control" id="nomProfil" name="champ2" placeholder="Nom" value="{{ nom }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="emailProfil" class="col-lg-3 control-label">Email :</label>
                             <div class="col-lg-9">
-                                <input type="email" class="form-control" id="emailProfil" placeholder="prenom.nom@gmail.com">
+                                <input type="email" class="form-control" id="emailProfil" name="champ4" placeholder="prenom.nom@gmail.com" value="{{ email }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="dateProfil" class="col-lg-3 control-label">Naissance :</label>
                             <div class="col-lg-9">
-                                <input type="date" class="form-control" id="dateProfil">
+                                <input type="text" class="form-control" id="dateProfil" name="champ5">
                             </div>
                         </div>
                         <div class="form-group">
@@ -161,8 +161,6 @@
     <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-1.8.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
-    {% javascripts "SccBundle/Assets/js/script.js" %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <script src="{{ asset('SccBundle/Assets/js/script.js') }}"></script>
 
 {% endblock %}
