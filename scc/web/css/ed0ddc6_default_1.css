@@ -289,6 +289,42 @@
     margin-top: 2%;
 }
 
+/* Upload Fichiers */
+
+.btnUpload {
+    background-color: rgba(52,54,66,1);
+    border-color: rgba(52,54,66,1);
+    color: #ffffff;
+}
+
+.btnUpload:hover {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:focus {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:active {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:active:focus {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
 /* Candidature */
 
 .colorLink {
