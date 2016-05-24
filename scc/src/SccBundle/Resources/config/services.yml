@@ -2,3 +2,8 @@ services:
 #    scc.example:
 #        class: SccBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+    SccBundle.calendar_listener:
+        class: SccBundle\EventListener\CalendarEventListener
+        tags:
+            - { name: kernel.event_listener, event: calendar.load_events, method: loadEvents }
+        arguments: ['@doctrine.orm.entity_manager']

@@ -1,7 +1,142 @@
 {% extends "SccBundle:Default:index.html.twig" %}
 
-{% block title %}SccBundle:admin:admin{% endblock %}
-
 {% block body %}
-<h1>Welcome to the admin:admin page</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h3 class="titleSubmission">Nouvelles candidatures</h3>
+                    </div>
+
+                    {% if Candidatures %}
+                        <div class="col-md-3">
+                            <b>NOM</b>
+                        </div>
+                        <div class="col-md-3">
+                            <b>PRÉNOM</b>
+                        </div>
+                        <div class="col-md-3">
+                            <b>MOTIVATIONS</b>
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                        <br><br>
+                            {% for candidature in Candidatures %}
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.nom }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.prenom }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    {{ candidature.motivation }}
+                                </div>
+                                <div class="col-md-3" id="spaceCandidature">
+                                    <a href="{{ path('removeUser', {'id' :  candidature.id }) }}" class="btn btnRefuser">Refuser</a>
+                                    &nbsp;&nbsp;
+                                    <a href="{{ path('addUser', {'id' :  candidature.id }) }}" class="btn btnValider">Valider</a>
+                                </div>
+
+                            {% endfor %}
+                    {% else %}
+                        <h4 class="newSubmission"><em>Aucune nouvelle candidatures</em></h4>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container addContract">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h3 class="titleForm">Ajouter un contrat</h3>
+                    </div>
+                    {{ form_start(form, {'method':'POST','attr': {'class': 'form-horizontal'}}) }}
+                    {# Les erreurs générales du formulaire. #}
+                    {{ form_errors(form) }}
+                    {# Champ Nom#}
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.Titre, "Titre :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.Titre) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.Titre, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.Resume, "Contenu :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.Resume) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.Resume, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {# Génération du label. #}
+                        {{ form_label(form.NbCoach, "Coach(s) :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.NbCoach) }}
+                        <div class="col-md-8">
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.NbCoach, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    {# Champ Duration #}
+                    <div class="form-group">
+                        {{ form_label(form.Duration, "Durée (mois) :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.Duration) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.Duration, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    {# Champ StartDate #}
+                    <div class="form-group">
+                        {{ form_label(form.StartDate, "Début :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.StartDate) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.StartDate, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    {# Champ EndDate #}
+                    <div class="form-group">
+                        {{ form_label(form.EndDate, "Fin :", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                        {{ form_errors(form.EndDate) }}
+                        <div class="col-sm-8">
+                            {{ form_widget(form.EndDate, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    {# Submit #}
+                    <div class="col-md-11">
+                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btnProfile pull-right'}}) }}
+                    </div>
+                    {# Génération automatique des champs pas encore écrits.
+                       Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                       et tous les champs cachés (type « hidden »). #}
+                    {{ form_rest(form) }}
+
+                    {# Fermeture de la balise <form> du formulaire HTML #}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
 {% endblock %}
+

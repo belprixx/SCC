@@ -1,0 +1,166 @@
+{% extends "SccBundle:Default:index.html.twig" %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <!-- Résumé profile -->
+        <form role="form" id="resumeProfil">
+            <div class="form-group">
+                <label for="firstName"></label>
+                <input type="textarea" class="form-control" id="prenomProfil" placeholder="Prénom" name="champ1" value="{{ prenom }}" disabled>
+            </div>
+            <div class="form-group">
+                <label for="lastName"></label>
+                <input type="textarea" class="form-control" id="nomProfil" placeholder="Nom" name="champ2" value="{{ nom }}" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" class="form-control" id="emailProfil" placeholder="prenom.nom@gmail.com" name="champ4" value="{{ email }}" disabled>
+            </div>
+            <div class="btnProfile">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg pull-right btnProfile"
+                        data-toggle="modal" data-target="#myModal">Profil complet</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="titleProfile">Mon profil</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="loginProfil" class="col-lg-3 control-label">Login :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="loginProfil" placeholder="UserOne" name="champ3" value="{{ username }}" disabled >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenomProfil" class="col-lg-3 control-label">Prénom :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="prenomProfil" name="champ1" placeholder="Prénom" value="{{ prenom }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomProfil" class="col-lg-3 control-label">Nom :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="nomProfil" name="champ2" placeholder="Nom" value="{{ nom }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailProfil" class="col-lg-3 control-label">Email :</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="emailProfil" name="champ4" placeholder="prenom.nom@gmail.com" value="{{ email }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateProfil" class="col-lg-3 control-label">Naissance :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="dateProfil" name="champ5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="candidatureProfil" class="col-lg-3 control-label">Candidatures :</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="candidatureProfil" placeholder="2" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <button type="submit" class="btn btn-primary btnProfile" id="savechange">Valider</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Factures -->
+
+    <div class="container facture">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h3>Mes factures</h3>
+                        </div>
+                        <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#" data-toggle="dropdown"><i class="fa fa-align-justify" aria-hidden="true"></i> Historique <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mai 2016</a></li>
+                            <li><a href="#">Avril 2016</a></li>
+                            <li><a href="#">Mars 2016</a></li>
+                            <li><a href="#">Février 2016</a></li>
+                            <li><a href="#">Janvier 2016</a></li>
+                            <li><a href="#">Décembre 2015</a></li>
+                            <li><a href="#">Novembre 2015</a></li>
+                            <li><a href="#">Octobre 2015</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dernières candidatures -->
+
+    <div class="container" id="lastSubmissions">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Mes dernières candidatures</h3>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload de fichiers -->
+
+    <div class="container" id="divFile">
+        <div class="row">
+            <div id="calendarUserIndex" class="col-md-6">
+                {% include 'ADesignsCalendarBundle::calendar.html.twig' %}
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h3 class="titleForm">Mes documents</h3><br>
+                        </div>
+                        <form class="form-group" action="accueil.html" method="post">
+                            <label for="mon_fichier" class="col-md-6 control-label">Tout format | max. 1 Mo :</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                            <div class="col-md-5">
+                                <label class="btn btnUpload btn-file pull-right">
+                                    Uploader <input type="file" style="display: none;">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-1.8.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
+    <script src="{{ asset('SccBundle/Assets/js/script.js') }}"></script>
+
+{% endblock %}

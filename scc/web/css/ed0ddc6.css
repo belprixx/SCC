@@ -1,0 +1,451 @@
+/* ----------- All website ----------- */
+
+/** {
+    font-family: 'Raleway';
+    src: url('');
+}*/
+/** blop **/
+@font-face {
+    font-family: 'Raleway';
+    src: url('//fonts.googleapis.com/css?family=Raleway');
+}
+
+/* ----------- Header ----------- */
+
+.header {
+    background-color: rgba(52,54,66,1);
+}
+
+#headerPosition {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    border-radius: 7px;
+}
+
+#backNav {
+    background-color: #fafafa;
+}
+
+.logo {
+    max-width: 5em;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+}
+
+.logo:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+}
+
+.navbar-brand:hover {
+    color: #25b8c5;
+}
+
+.navbar-collapse a {
+    color: rgba(255,255,255,1);
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: rgba(52,54,66,1);
+    color: #25b8c5;
+}
+
+/* ----------- Login ----------- */
+
+.bodyLogin img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin-top: -1.5%;
+    /*width: 100%;
+    height: 100%;
+    margin-top: -2%;
+    position: absolute;
+    background-image: url("../img/loginBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+#loginModal {
+    margin-top: 10%;
+}
+
+.btnLogin {
+    background-color: #25b8c5;
+    border-color: #25b8c5;
+}
+
+.btnLogin:hover {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:focus {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:active {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.btnLogin:active:focus {
+    background-color: #58d2dd;
+    border-color: #58d2dd;
+    outline:none !important;
+}
+
+.titleLogin {
+    color: rgba(52,54,66,1);
+}
+
+.joinUs {
+    color: #8e8e9d;
+}
+
+.joinUs:hover {
+    color: #8e8e9d;
+}
+
+.joinUs:link {
+    color: #8e8e9d;
+}
+
+.joinUs:visited {
+    color: rgba(52,54,66,1);
+}
+
+#boxFooter {
+    height: 10px;
+    width: 10px;
+    background-color: #5eb5e0;
+    z-index: 1;
+}
+
+/* ----------- Nous rejoindre ----------- */
+
+.titleForm {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.centerForm {
+    width: auto;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+/* ----------- Page Admin ----------- */
+
+.titleSubmission {
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#spaceCandidature {
+    margin-bottom: 2%;
+}
+
+.newSubmission {
+    text-align: center;
+}
+
+.btnRefuser {
+    background-color: #e63a56;
+    border-color: #e63a56;
+    color: #ffffff;
+}
+
+.btnRefuser:hover {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:focus {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:active {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnRefuser:active:focus {
+    background-color: #fa657d;
+    border-color: #fa657d;
+    outline:none !important;
+    color: #ffffff;
+}
+
+.btnValider {
+    background-color: #9bc65f;
+    color: #ffffff;
+    border-color: #9bc65f;
+}
+
+.btnValider:hover {
+    background-color: #bee587;
+    color: #ffffff;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:focus {
+    background-color: #bee587;
+    color: #ffffff;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:active {
+    background-color: #bee587;
+    color: #ffffff;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+.btnValider:active:focus {
+    background-color: #bee587;
+    color: #ffffff;
+    border-color: #bee587;
+    outline:none !important;
+}
+
+/* ----------- Pages User ----------- */
+
+/* Profil */
+
+.btnProfile {
+    background-color: rgba(52,54,66,1);
+    border-color: rgba(52,54,66,1);
+}
+
+.btnProfile:hover {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:focus {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:active {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnProfile:active:focus {
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.titleProfile {
+    text-align: center;
+}
+
+#lastSubmissions {
+    margin-bottom: 2%;
+    border: none;
+    border: 0;
+    border-style: none;
+}
+
+#divFile {
+    margin-bottom: 2%;
+}
+
+#uploadFiles {
+    text-align: center;
+}
+
+#contact {
+    margin-top: 7%;
+}
+
+.colorContact {
+    color: #25b8c5;
+}
+
+.colorContact:hover {
+    color: #8cedf6;
+}
+
+/* Facture */
+
+.facture {
+    margin-top: 2%;
+}
+
+/* Upload Fichiers */
+
+.btnUpload {
+    background-color: rgba(52,54,66,1);
+    border-color: rgba(52,54,66,1);
+    color: #ffffff;
+}
+
+.btnUpload:hover {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:focus {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:active {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnUpload:active:focus {
+    background-color: #4e5162;
+    color: #ffffff;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+/* Candidature */
+
+.colorLink {
+    color: rgba(40,40,40,1);
+    text-align: center;
+}
+
+.colorLink:hover {
+    color: #5d5d5d;
+}
+
+.btnSearch {
+    color: #ffffff;
+    background-color: #636376;
+    border-color: #636376;
+}
+
+.btnSearch:hover {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:focus {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:active {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+.btnSearch:active:focus {
+    color: #ffffff;
+    background-color: #4e5162;
+    border-color: #4e5162;
+    outline:none !important;
+}
+
+#jobs {
+    padding-left: 10%;
+}
+
+/* Agenda */
+
+.agenda {
+    margin-bottom: 2%;
+}
+
+/* FAQ */
+
+.titleFaq {
+    text-align: center;
+}
+
+/* ----------- Footer ----------- */
+
+.helpBox {
+    padding-bottom: 28%;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(40,40,40,1);
+}
+
+footer{
+    background-color: rgba(40,40,40,1);
+    color: rgba(255,255,255,1);
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.secondfooter {
+    bottom: 0;
+}
+
+footer p {
+    text-align: justify;
+}
+
+footer li, footer ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.colorContact {
+    color: #25b8c5;
+}
+
+.colorContact:hover {
+    color: #8cedf6;
+}
+
+.centerIcons {
+    padding-right: 2%;
+    padding-left: 2%;
+    color: #25b8c5;
+}
+
+.centerIconSpecial {
+    padding-right: 2%;
+    padding-left: 5%;
+    color: #25b8c5;
+}
+
+.centerIcons:hover {
+    color: #8cedf6;
+}
+
+.centerIconSpecial:hover {
+    color: #8cedf6;
+}
